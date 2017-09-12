@@ -16,6 +16,7 @@ import org.firstinspires.ftc.robotcore.external.navigation.VuforiaTrackables;
 @Autonomous(name="VuMark Test", group ="Autonomous")
 public class imageProcessingTest extends LinearOpMode {
     VuforiaLocalizer vuforia;
+
     @Override
     public void runOpMode() throws InterruptedException {
         //set up phone camera
@@ -56,5 +57,7 @@ public class imageProcessingTest extends LinearOpMode {
                  * on which VuMark was visible. */
                 telemetry.addData("VuMark", "%s visible", vuMark);
 
+            }
+        }
     }
 }
