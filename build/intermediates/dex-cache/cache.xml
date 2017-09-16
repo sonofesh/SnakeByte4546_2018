@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="/Users/sopa/.android/build-cache/3210110eb5364b27a2c205984c6c06a15f4696b4/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="c2abba0621a5319232804767218216568263aa37">
+        <dex dex="/Users/sopa/Desktop/SnakeByte4546_2018/TeamCode/build/intermediates/transforms/dex/debug/folders/1000/10/classes_8d684264844d2d87ce6e090a689ed8ae8ae3c4fb/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/sopa/.android/build-cache/4200a5064f33797dee76e488d91714554be4f780/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="9da82f9829b6cafb8407989729481220ca06c905">
+        <dex dex="/Users/sopa/Desktop/SnakeByte4546_2018/TeamCode/build/intermediates/transforms/dex/debug/folders/1000/10/classes_7bbe6e40732a0ff8bc061b4ccc134b0a4a4dd313/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/sopa/.android/build-cache/600005b06cd4b7143c4cb873632d07b1cca790cb/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="96cbbea552fe9bf3c56540c7e4912eb5cf72301e">
+        <dex dex="/Users/sopa/Desktop/SnakeByte4546_2018/TeamCode/build/intermediates/transforms/dex/debug/folders/1000/10/classes_cba1c86a04e5358b7606a35ea1786e84caefd317/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/sopa/.android/build-cache/7fc2725273c16c4a620bfc8fad0a54242df5bedc/output/jars/libs/javac.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="c576121aac49e547b39aedfb1daa29782db4166c">
+        <dex dex="/Users/sopa/Desktop/SnakeByte4546_2018/TeamCode/build/intermediates/transforms/dex/debug/folders/1000/10/javac_3c5a59f11913adaec68b053fcf8a31b786e964d0/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/sopa/.android/build-cache/03fe160f0561159b86cb005a6a7e67c74c600d28/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="9dafed45e330aec14abcce05bdb7bbdb2a2d7092">
+        <dex dex="/Users/sopa/Desktop/SnakeByte4546_2018/TeamCode/build/intermediates/transforms/dex/debug/folders/1000/10/classes_97a36e573d82ff0c6ad6f48797417b2e57d8553e/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/sopa/.android/build-cache/f1e3e73ac8236ab4863bcfde9a882a65b3489015/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="75bdc736b17d8f39d246beac357cb3a0e007fcfa">
+        <dex dex="/Users/sopa/Desktop/SnakeByte4546_2018/TeamCode/build/intermediates/transforms/dex/debug/folders/1000/10/classes_365de665e648579a1acfd2ca7364fb1401999e0a/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/sopa/.android/build-cache/7fc2725273c16c4a620bfc8fad0a54242df5bedc/output/jars/libs/Vuforia.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="91b46366eb9f8203073ee2935087c097c888c0ed">
+        <dex dex="/Users/sopa/Desktop/SnakeByte4546_2018/TeamCode/build/intermediates/transforms/dex/debug/folders/1000/10/Vuforia_5c5319f3e881e172949e5a8b151bf027ebc5223d/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/sopa/.android/build-cache/5e79ddb3f5c50ca72337a5d096abe9bc36eb3d36/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="9403be210676ed196cdcc64c7391b9ae2361c174">
+        <dex dex="/Users/sopa/Desktop/SnakeByte4546_2018/TeamCode/build/intermediates/transforms/dex/debug/folders/1000/10/classes_9a18aea0404fee7cca806960ee3e2618dd5d179c/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/sopa/Desktop/SnakeByte4546_2018/TeamCode/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
+        <dex dex="/Users/sopa/Desktop/SnakeByte4546_2018/TeamCode/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_f23a898e59e84f76fd262df3cedc35e799be5d44/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/sopa/.android/build-cache/7fc2725273c16c4a620bfc8fad0a54242df5bedc/output/jars/libs/gson-extras-0.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="b30c2655badcc7ce97f84e49f777b7dd154bad57">
+        <dex dex="/Users/sopa/Desktop/SnakeByte4546_2018/TeamCode/build/intermediates/transforms/dex/debug/folders/1000/10/gson-extras-0.2.1_4d3973c12e920ec98e72119d622d7e525b0dbaba/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/sopa/.android/build-cache/7fc2725273c16c4a620bfc8fad0a54242df5bedc/output/jars/libs/support-annotations-23.4.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="5a214d3b1b12e72f4fb0d5d5d8d0ec43c96de2b5">
+        <dex dex="/Users/sopa/Desktop/SnakeByte4546_2018/TeamCode/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-23.4.0_2ec0d6e3bcdffad366a499455a31b23c29b2da8c/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/sopa/Desktop/SnakeByte4546_2018/TeamCode/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="bb11818e92fe180de1c40b986285ef12f014fc27">
+        <dex dex="/Users/sopa/Desktop/SnakeByte4546_2018/TeamCode/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_01058af2cb4201d724cc3f92e6f1617440878422/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/sopa/.android/build-cache/7fc2725273c16c4a620bfc8fad0a54242df5bedc/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="e259d01a014f392930432e85cc1ac9bf807a92df">
+        <dex dex="/Users/sopa/Desktop/SnakeByte4546_2018/TeamCode/build/intermediates/transforms/dex/debug/folders/1000/10/classes_a632b7d47014489d814c791e3873c4176d47df1e/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/sopa/.android/build-cache/7fc2725273c16c4a620bfc8fad0a54242df5bedc/output/jars/libs/gson-2.8.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="e118dd0900e4a18fb928ebb8df2d9fbda78f2b5d">
+        <dex dex="/Users/sopa/Desktop/SnakeByte4546_2018/TeamCode/build/intermediates/transforms/dex/debug/folders/1000/10/gson-2.8.0_f15a7d53977d471ac1bbb30be5979532248db607/classes.dex" />
+    </item>
+
+</items>
