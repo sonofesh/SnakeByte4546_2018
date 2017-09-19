@@ -1,10 +1,19 @@
 [
     {
+<<<<<<< HEAD
         "merged": "/Users/sopa/Desktop/SnakeByte4546_2018/FtcRobotController/build/intermediates/res/merged/release/drawable-hdpi-v4/button_shape.xml",
         "source": "/Users/sopa/.android/build-cache/3210110eb5364b27a2c205984c6c06a15f4696b4/output/res/drawable-hdpi-v4/button_shape.xml"
     },
     {
         "merged": "/Users/sopa/Desktop/SnakeByte4546_2018/FtcRobotController/build/intermediates/res/merged/release/drawable-hdpi-v4/ic_launcher.png",
         "source": "/Users/sopa/Desktop/SnakeByte4546_2018/FtcRobotController/src/main/res/drawable-hdpi/ic_launcher.png"
+=======
+        "merged": "C:\\Users\\raymo\\Documents\\GitHub\\SnakeByte4546_2018\\FtcRobotController\\build\\intermediates\\res\\merged\\release\\drawable-hdpi-v4\\ic_launcher.png",
+        "source": "C:\\Users\\raymo\\Documents\\GitHub\\SnakeByte4546_2018\\FtcRobotController\\src\\main\\res\\drawable-hdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\raymo\\Documents\\GitHub\\SnakeByte4546_2018\\FtcRobotController\\build\\intermediates\\res\\merged\\release\\drawable-hdpi-v4\\button_shape.xml",
+        "source": "C:\\Users\\raymo\\.android\\build-cache\\e2b7644c4d211b1ee9f2a9a05ee1c94fd9462049\\output\\res\\drawable-hdpi-v4\\button_shape.xml"
+>>>>>>> origin/master
     }
 ]

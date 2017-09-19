@@ -2,6 +2,7 @@
 <items version="2" >
 
     <item
+<<<<<<< HEAD
         is-multidex="true"
         jar="/Users/sopa/.android/build-cache/3210110eb5364b27a2c205984c6c06a15f4696b4/output/jars/classes.jar"
         jumboMode="true"
@@ -126,6 +127,123 @@
         revision="25.0.3"
         sha1="e118dd0900e4a18fb928ebb8df2d9fbda78f2b5d">
         <dex dex="/Users/sopa/Desktop/SnakeByte4546_2018/TeamCode/build/intermediates/transforms/dex/debug/folders/1000/10/gson-2.8.0_f15a7d53977d471ac1bbb30be5979532248db607/classes.dex" />
+=======
+        is-multidex="false"
+        jar="C:\Users\raymo\.android\build-cache\f222e8854e47f9148b72d4a7daed1da1c6cb8c4c\output\jars\libs\gson-extras-0.2.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="b30c2655badcc7ce97f84e49f777b7dd154bad57">
+        <dex dex="C:\Users\raymo\Documents\GitHub\SnakeByte4546_2018\TeamCode\build\intermediates\pre-dexed\debug\gson-extras-0.2.1_96daef1cde1eec3db78daaf2a05d131312fba741.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\raymo\.android\build-cache\b0f5e2a286bc40504d3fb8f6a9b0a0b9e45139a8\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="9403be210676ed196cdcc64c7391b9ae2361c174">
+        <dex dex="C:\Users\raymo\Documents\GitHub\SnakeByte4546_2018\TeamCode\build\intermediates\pre-dexed\debug\classes_a244558e4042474b2d7cd700ecd55c2e1e423b5d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\raymo\.android\build-cache\5198bd94cfb016e863db94d2510ff06a3c2c06d8\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="75bdc736b17d8f39d246beac357cb3a0e007fcfa">
+        <dex dex="C:\Users\raymo\Documents\GitHub\SnakeByte4546_2018\TeamCode\build\intermediates\pre-dexed\debug\classes_2eccd317d0d272ecc024d876d5debe91e305393c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\raymo\.android\build-cache\f222e8854e47f9148b72d4a7daed1da1c6cb8c4c\output\jars\libs\javac.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="c576121aac49e547b39aedfb1daa29782db4166c">
+        <dex dex="C:\Users\raymo\Documents\GitHub\SnakeByte4546_2018\TeamCode\build\intermediates\pre-dexed\debug\javac_c17ab80da2e8e99b42f2403d52c05473c606341e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\raymo\.android\build-cache\f222e8854e47f9148b72d4a7daed1da1c6cb8c4c\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="e259d01a014f392930432e85cc1ac9bf807a92df">
+        <dex dex="C:\Users\raymo\Documents\GitHub\SnakeByte4546_2018\TeamCode\build\intermediates\pre-dexed\debug\classes_93400b705d98d1af2d7cc2fd6632383b989813b3.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\raymo\.android\build-cache\37d5356a2abc0abafe1b58b0fa14d54d92c646f3\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="96cbbea552fe9bf3c56540c7e4912eb5cf72301e">
+        <dex dex="C:\Users\raymo\Documents\GitHub\SnakeByte4546_2018\TeamCode\build\intermediates\pre-dexed\debug\classes_45bf15047f58fa3cbf7a76503e45cd3eeb88d293.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\raymo\.android\build-cache\e2b7644c4d211b1ee9f2a9a05ee1c94fd9462049\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="c2abba0621a5319232804767218216568263aa37">
+        <dex dex="C:\Users\raymo\Documents\GitHub\SnakeByte4546_2018\TeamCode\build\intermediates\pre-dexed\debug\classes_a91e631509220b2a7f050e9f30144ae3173b56ba.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\raymo\.android\build-cache\57c20c60ef80d6f46369d147498d0a144d71521c\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="9dafed45e330aec14abcce05bdb7bbdb2a2d7092">
+        <dex dex="C:\Users\raymo\Documents\GitHub\SnakeByte4546_2018\TeamCode\build\intermediates\pre-dexed\debug\classes_78c77c3d4e435ba9ecd221753a5427255d7815d1.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\raymo\.android\build-cache\f222e8854e47f9148b72d4a7daed1da1c6cb8c4c\output\jars\libs\support-annotations-23.4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="5a214d3b1b12e72f4fb0d5d5d8d0ec43c96de2b5">
+        <dex dex="C:\Users\raymo\Documents\GitHub\SnakeByte4546_2018\TeamCode\build\intermediates\pre-dexed\debug\support-annotations-23.4.0_4498d57d28a15a04214a18b06e717a98f201b603.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\raymo\.android\build-cache\f222e8854e47f9148b72d4a7daed1da1c6cb8c4c\output\jars\libs\Vuforia.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="91b46366eb9f8203073ee2935087c097c888c0ed">
+        <dex dex="C:\Users\raymo\Documents\GitHub\SnakeByte4546_2018\TeamCode\build\intermediates\pre-dexed\debug\Vuforia_548034863907e851f2ed6abb6012711adf0f8a0e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\raymo\.android\build-cache\1600f8437dce9922f54189d34832d191e43f13ac\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="9da82f9829b6cafb8407989729481220ca06c905">
+        <dex dex="C:\Users\raymo\Documents\GitHub\SnakeByte4546_2018\TeamCode\build\intermediates\pre-dexed\debug\classes_2e30c21651018722b7031d350893e4e376b60a4f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\raymo\Documents\GitHub\SnakeByte4546_2018\FtcRobotController\build\intermediates\bundles\default\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="63096d280a6d0792ddbe5601216c3bc2bb685e8c">
+        <dex dex="C:\Users\raymo\Documents\GitHub\SnakeByte4546_2018\TeamCode\build\intermediates\pre-dexed\debug\classes_1b3576cc2ebba5867b0b7f518288c221cd589d98.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\raymo\.android\build-cache\f222e8854e47f9148b72d4a7daed1da1c6cb8c4c\output\jars\libs\gson-2.8.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="e118dd0900e4a18fb928ebb8df2d9fbda78f2b5d">
+        <dex dex="C:\Users\raymo\Documents\GitHub\SnakeByte4546_2018\TeamCode\build\intermediates\pre-dexed\debug\gson-2.8.0_71d9348a35fb22e1ad73eecc2b4f4f35828c245c.jar" />
+>>>>>>> origin/master
     </item>
 
 </items>

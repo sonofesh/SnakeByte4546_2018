@@ -1,6 +1,10 @@
 [
     {
+<<<<<<< HEAD
         "outputFile": "/Users/sopa/Desktop/SnakeByte4546_2018/FtcRobotController/build/intermediates/incremental/mergeReleaseResources/merged.dir/values-w820dp-v13/values-w820dp-v13.xml",
+=======
+        "outputFile": "C:\\Users\\raymo\\Documents\\GitHub\\SnakeByte4546_2018\\FtcRobotController\\build\\intermediates\\incremental\\mergeReleaseResources\\merged.dir\\values-w820dp-v13\\values-w820dp-v13.xml",
+>>>>>>> origin/master
         "map": [
             {
                 "to": {
@@ -11,6 +15,7 @@
                     "endOffset": 108
                 },
                 "from": {
+<<<<<<< HEAD
                     "file": "/Users/sopa/Desktop/SnakeByte4546_2018/FtcRobotController/src/main/res/values-w820dp/dimens.xml",
                     "position": {
                         "startLine": 37,
@@ -18,6 +23,15 @@
                         "startOffset": 1940,
                         "endColumn": 57,
                         "endOffset": 1993
+=======
+                    "file": "C:\\Users\\raymo\\Documents\\GitHub\\SnakeByte4546_2018\\FtcRobotController\\src\\main\\res\\values-w820dp\\dimens.xml",
+                    "position": {
+                        "startLine": 37,
+                        "startColumn": 4,
+                        "startOffset": 1977,
+                        "endColumn": 57,
+                        "endOffset": 2030
+>>>>>>> origin/master
                     }
                 }
             }
