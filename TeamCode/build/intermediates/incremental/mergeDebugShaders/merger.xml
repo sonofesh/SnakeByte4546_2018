@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <<<<<<< HEAD
+<<<<<<< HEAD
 <merger version="3"><dataSet config="main"><source path="C:\Users\raymo\Documents\GitHub\SnakeByte4546_2018\TeamCode\src\main\shaders"/></dataSet><dataSet config="debug"><source path="C:\Users\raymo\Documents\GitHub\SnakeByte4546_2018\TeamCode\src\debug\shaders"/></dataSet></merger>
 =======
 <merger version="3"><dataSet config="main"><source path="/Users/sopa/Desktop/SnakeByte4546_2018/TeamCode/src/main/shaders"/></dataSet><dataSet config="debug"><source path="/Users/sopa/Desktop/SnakeByte4546_2018/TeamCode/src/debug/shaders"/></dataSet></merger>
 >>>>>>> origin/master
+=======
+<merger version="3"><dataSet config="main"><source path="/Users/sopa/Desktop/SnakeByte4546_2018/TeamCode/src/main/shaders"/></dataSet><dataSet config="debug"><source path="/Users/sopa/Desktop/SnakeByte4546_2018/TeamCode/src/debug/shaders"/></dataSet></merger>
+>>>>>>> 39dd6e6c217aa0336371bc261fe83ebdea5ab9d5
