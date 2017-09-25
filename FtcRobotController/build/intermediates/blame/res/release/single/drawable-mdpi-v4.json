@@ -1,6 +1,11 @@
 [
     {
+<<<<<<< HEAD
+        "merged": "/Users/sopa/Desktop/SnakeByte4546_2018/FtcRobotController/build/intermediates/res/merged/release/drawable-mdpi-v4/ic_launcher.png",
+        "source": "/Users/sopa/Desktop/SnakeByte4546_2018/FtcRobotController/src/main/res/drawable-mdpi/ic_launcher.png"
+=======
         "merged": "C:\\Users\\raymo\\Documents\\GitHub\\SnakeByte4546_2018\\FtcRobotController\\build\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\ic_launcher.png",
         "source": "C:\\Users\\raymo\\Documents\\GitHub\\SnakeByte4546_2018\\FtcRobotController\\src\\main\\res\\drawable-mdpi\\ic_launcher.png"
+>>>>>>> origin/master
     }
 ]

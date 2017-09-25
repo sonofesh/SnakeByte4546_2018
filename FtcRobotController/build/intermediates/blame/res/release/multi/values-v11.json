@@ -1,6 +1,10 @@
 [
     {
+<<<<<<< HEAD
+        "outputFile": "/Users/sopa/Desktop/SnakeByte4546_2018/FtcRobotController/build/intermediates/incremental/mergeReleaseResources/merged.dir/values-v11/values-v11.xml",
+=======
         "outputFile": "C:\\Users\\raymo\\Documents\\GitHub\\SnakeByte4546_2018\\FtcRobotController\\build\\intermediates\\incremental\\mergeReleaseResources\\merged.dir\\values-v11\\values-v11.xml",
+>>>>>>> origin/master
         "map": [
             {
                 "to": {
@@ -12,7 +16,11 @@
                     "endOffset": 187
                 },
                 "from": {
+<<<<<<< HEAD
+                    "file": "/Users/sopa/.android/build-cache/7fc2725273c16c4a620bfc8fad0a54242df5bedc/output/res/values-v11/values-v11.xml",
+=======
                     "file": "C:\\Users\\raymo\\.android\\build-cache\\f222e8854e47f9148b72d4a7daed1da1c6cb8c4c\\output\\res\\values-v11\\values-v11.xml",
+>>>>>>> origin/master
                     "position": {
                         "startLine": 2,
                         "startColumn": 4,

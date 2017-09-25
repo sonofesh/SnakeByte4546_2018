@@ -1,0 +1,14 @@
+<<<<<<< HEAD
+#Thu Sep 21 16:39:49 CDT 2017
+base.0=C\:\\Users\\raymo\\Documents\\GitHub\\SnakeByte4546_2018\\TeamCode\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main
+renamed.0=classes.dex
+file.0=C\:\\Users\\raymo\\Documents\\GitHub\\SnakeByte4546_2018\\TeamCode\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main\\classes.dex
+=======
+#Tue Sep 12 17:19:49 CDT 2017
+base.0=/Users/sopa/Desktop/SnakeByte4546_2018/TeamCode/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_01058af2cb4201d724cc3f92e6f1617440878422
+renamed.1=classes.dex
+renamed.0=classes2.dex
+file.1=/Users/sopa/Desktop/SnakeByte4546_2018/TeamCode/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_f23a898e59e84f76fd262df3cedc35e799be5d44/classes.dex
+base.1=/Users/sopa/Desktop/SnakeByte4546_2018/TeamCode/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_f23a898e59e84f76fd262df3cedc35e799be5d44
+file.0=/Users/sopa/Desktop/SnakeByte4546_2018/TeamCode/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_01058af2cb4201d724cc3f92e6f1617440878422/classes.dex
+>>>>>>> origin/master
