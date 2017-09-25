@@ -1,9 +1,10 @@
 [
     {
-        "merged": "C:\\Users\\raymo\\Documents\\GitHub\\SnakeByte4546_2018\\FtcRobotController\\build\\intermediates\\res\\merged\\androidTest\\debug\\menu\\menu_server.xml",
-        "source": "C:\\Users\\raymo\\.android\\build-cache\\5198bd94cfb016e863db94d2510ff06a3c2c06d8\\output\\res\\menu\\menu_server.xml"
+        "merged": "/Users/sopa/Desktop/SnakeByte4546_2018/C:\\Users\\raymo\\Documents\\GitHub\\SnakeByte4546_2018\\FtcRobotController\\build\\intermediates\\res\\merged\\androidTest\\debug\\menu\\menu_server.xml",
+        "source": "/Users/sopa/Desktop/SnakeByte4546_2018/C:\\Users\\raymo\\.android\\build-cache\\5198bd94cfb016e863db94d2510ff06a3c2c06d8\\output\\res\\menu\\menu_server.xml"
     },
     {
+<<<<<<< HEAD
         "merged": "C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\C:\\Users\\raymo\\Documents\\GitHub\\SnakeByte4546_2018\\FtcRobotController\\build\\intermediates\\res\\merged\\androidTest\\debug\\menu\\menu_server.xml",
         "source": "C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\C:\\Users\\raymo\\.android\\build-cache\\5198bd94cfb016e863db94d2510ff06a3c2c06d8\\output\\res\\menu\\menu_server.xml"
     },
@@ -34,5 +35,25 @@
     {
         "merged": "C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\C:\\Users\\raymo\\Documents\\GitHub\\SnakeByte4546_2018\\FtcRobotController\\build\\intermediates\\res\\merged\\androidTest\\debug\\menu\\main_menu.xml",
         "source": "C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\C:\\Users\\raymo\\.android\\build-cache\\1600f8437dce9922f54189d34832d191e43f13ac\\output\\res\\menu\\main_menu.xml"
+=======
+        "merged": "/Users/sopa/Desktop/SnakeByte4546_2018/FtcRobotController/build/intermediates/res/merged/androidTest/debug/menu/main_menu.xml",
+        "source": "/Users/sopa/.android/build-cache/4200a5064f33797dee76e488d91714554be4f780/output/res/menu/main_menu.xml"
+    },
+    {
+        "merged": "/Users/sopa/Desktop/SnakeByte4546_2018/C:\\Users\\raymo\\Documents\\GitHub\\SnakeByte4546_2018\\FtcRobotController\\build\\intermediates\\res\\merged\\androidTest\\debug\\menu\\ftc_robot_controller.xml",
+        "source": "/Users/sopa/Desktop/SnakeByte4546_2018/C:\\Users\\raymo\\Documents\\GitHub\\SnakeByte4546_2018\\FtcRobotController\\build\\intermediates\\bundles\\debug\\res\\menu\\ftc_robot_controller.xml"
+    },
+    {
+        "merged": "/Users/sopa/Desktop/SnakeByte4546_2018/FtcRobotController/build/intermediates/res/merged/androidTest/debug/menu/menu_server.xml",
+        "source": "/Users/sopa/.android/build-cache/f1e3e73ac8236ab4863bcfde9a882a65b3489015/output/res/menu/menu_server.xml"
+    },
+    {
+        "merged": "/Users/sopa/Desktop/SnakeByte4546_2018/FtcRobotController/build/intermediates/res/merged/androidTest/debug/menu/ftc_robot_controller.xml",
+        "source": "/Users/sopa/Desktop/SnakeByte4546_2018/FtcRobotController/build/intermediates/bundles/debug/res/menu/ftc_robot_controller.xml"
+    },
+    {
+        "merged": "/Users/sopa/Desktop/SnakeByte4546_2018/C:\\Users\\raymo\\Documents\\GitHub\\SnakeByte4546_2018\\FtcRobotController\\build\\intermediates\\res\\merged\\androidTest\\debug\\menu\\main_menu.xml",
+        "source": "/Users/sopa/Desktop/SnakeByte4546_2018/C:\\Users\\raymo\\.android\\build-cache\\1600f8437dce9922f54189d34832d191e43f13ac\\output\\res\\menu\\main_menu.xml"
+>>>>>>> 39dd6e6c217aa0336371bc261fe83ebdea5ab9d5
     }
 ]
