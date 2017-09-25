@@ -27,7 +27,7 @@ public class MecanumTest extends OpMode {
 
     @Override
     public void loop() {
-
+        setPower();
     }
 
     public double getVelocity() {
