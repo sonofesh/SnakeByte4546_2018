@@ -1,10 +1,9 @@
 [
     {
-        "merged": "/Users/sopa/Desktop/SnakeByte4546_2018/TeamCode/build/intermediates/res/merged/debug/raw/chimeconnect.wav",
-        "source": "/Users/sopa/.android/build-cache/3210110eb5364b27a2c205984c6c06a15f4696b4/output/res/raw/chimeconnect.wav"
+        "merged": "C:\\Users\\raymo\\Documents\\GitHub\\SnakeByte4546_2018\\TeamCode\\build\\intermediates\\res\\merged\\debug\\raw\\cube_mesh_fragment_shader.glsl",
+        "source": "C:\\Users\\raymo\\.android\\build-cache\\f222e8854e47f9148b72d4a7daed1da1c6cb8c4c\\output\\res\\raw\\cube_mesh_fragment_shader.glsl"
     },
     {
-<<<<<<< HEAD
         "merged": "C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\C:\\Users\\raymo\\Documents\\GitHub\\SnakeByte4546_2018\\TeamCode\\build\\intermediates\\res\\merged\\debug\\raw\\texture_fragment_shader.glsl",
         "source": "C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\C:\\Users\\raymo\\.android\\build-cache\\f222e8854e47f9148b72d4a7daed1da1c6cb8c4c\\output\\res\\raw\\texture_fragment_shader.glsl"
     },
@@ -35,33 +34,16 @@
     {
         "merged": "C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\TeamCode\\build\\intermediates\\res\\merged\\debug\\raw\\simple_vertex_shader.glsl",
         "source": "C:\\Users\\sopa\\.android\\build-cache\\7fc2725273c16c4a620bfc8fad0a54242df5bedc\\output\\res\\raw\\simple_vertex_shader.glsl"
-=======
-        "merged": "/Users/sopa/Desktop/SnakeByte4546_2018/C:\\Users\\raymo\\Documents\\GitHub\\SnakeByte4546_2018\\TeamCode\\build\\intermediates\\res\\merged\\debug\\raw\\cube_mesh_fragment_shader.glsl",
-        "source": "/Users/sopa/Desktop/SnakeByte4546_2018/C:\\Users\\raymo\\.android\\build-cache\\f222e8854e47f9148b72d4a7daed1da1c6cb8c4c\\output\\res\\raw\\cube_mesh_fragment_shader.glsl"
     },
     {
-        "merged": "/Users/sopa/Desktop/SnakeByte4546_2018/C:\\Users\\raymo\\Documents\\GitHub\\SnakeByte4546_2018\\TeamCode\\build\\intermediates\\res\\merged\\debug\\raw\\errormessage.wav",
-        "source": "/Users/sopa/Desktop/SnakeByte4546_2018/C:\\Users\\raymo\\.android\\build-cache\\e2b7644c4d211b1ee9f2a9a05ee1c94fd9462049\\output\\res\\raw\\errormessage.wav"
+        "merged": "C:\\Users\\raymo\\Documents\\GitHub\\SnakeByte4546_2018\\TeamCode\\build\\intermediates\\res\\merged\\debug\\raw\\chimedisconnect.wav",
+        "source": "C:\\Users\\raymo\\.android\\build-cache\\e2b7644c4d211b1ee9f2a9a05ee1c94fd9462049\\output\\res\\raw\\chimedisconnect.wav"
     },
     {
-        "merged": "/Users/sopa/Desktop/SnakeByte4546_2018/TeamCode/build/intermediates/res/merged/debug/raw/texture_fragment_shader.glsl",
-        "source": "/Users/sopa/.android/build-cache/7fc2725273c16c4a620bfc8fad0a54242df5bedc/output/res/raw/texture_fragment_shader.glsl"
+        "merged": "C:\\Users\\raymo\\Documents\\GitHub\\SnakeByte4546_2018\\TeamCode\\build\\intermediates\\res\\merged\\debug\\raw\\texture_fragment_shader.glsl",
+        "source": "C:\\Users\\raymo\\.android\\build-cache\\f222e8854e47f9148b72d4a7daed1da1c6cb8c4c\\output\\res\\raw\\texture_fragment_shader.glsl"
     },
     {
-        "merged": "/Users/sopa/Desktop/SnakeByte4546_2018/C:\\Users\\raymo\\Documents\\GitHub\\SnakeByte4546_2018\\TeamCode\\build\\intermediates\\res\\merged\\debug\\raw\\cube_mesh_vertex_shader.glsl",
-        "source": "/Users/sopa/Desktop/SnakeByte4546_2018/C:\\Users\\raymo\\.android\\build-cache\\f222e8854e47f9148b72d4a7daed1da1c6cb8c4c\\output\\res\\raw\\cube_mesh_vertex_shader.glsl"
->>>>>>> 39dd6e6c217aa0336371bc261fe83ebdea5ab9d5
-    },
-    {
-        "merged": "/Users/sopa/Desktop/SnakeByte4546_2018/TeamCode/build/intermediates/res/merged/debug/raw/texture_vertex_shader.glsl",
-        "source": "/Users/sopa/.android/build-cache/7fc2725273c16c4a620bfc8fad0a54242df5bedc/output/res/raw/texture_vertex_shader.glsl"
-    },
-    {
-        "merged": "/Users/sopa/Desktop/SnakeByte4546_2018/C:\\Users\\raymo\\Documents\\GitHub\\SnakeByte4546_2018\\TeamCode\\build\\intermediates\\res\\merged\\debug\\raw\\color_fragment_shader.glsl",
-        "source": "/Users/sopa/Desktop/SnakeByte4546_2018/C:\\Users\\raymo\\.android\\build-cache\\f222e8854e47f9148b72d4a7daed1da1c6cb8c4c\\output\\res\\raw\\color_fragment_shader.glsl"
-    },
-    {
-<<<<<<< HEAD
         "merged": "C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\TeamCode\\build\\intermediates\\res\\merged\\debug\\raw\\texture_fragment_shader.glsl",
         "source": "C:\\Users\\sopa\\.android\\build-cache\\7fc2725273c16c4a620bfc8fad0a54242df5bedc\\output\\res\\raw\\texture_fragment_shader.glsl"
     },
@@ -76,21 +58,12 @@
     {
         "merged": "C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\TeamCode\\build\\intermediates\\res\\merged\\debug\\raw\\texture_vertex_shader.glsl",
         "source": "C:\\Users\\sopa\\.android\\build-cache\\7fc2725273c16c4a620bfc8fad0a54242df5bedc\\output\\res\\raw\\texture_vertex_shader.glsl"
-=======
-        "merged": "/Users/sopa/Desktop/SnakeByte4546_2018/C:\\Users\\raymo\\Documents\\GitHub\\SnakeByte4546_2018\\TeamCode\\build\\intermediates\\res\\merged\\debug\\raw\\nxtstartupsound.wav",
-        "source": "/Users/sopa/Desktop/SnakeByte4546_2018/C:\\Users\\raymo\\.android\\build-cache\\e2b7644c4d211b1ee9f2a9a05ee1c94fd9462049\\output\\res\\raw\\nxtstartupsound.wav"
     },
     {
-        "merged": "/Users/sopa/Desktop/SnakeByte4546_2018/C:\\Users\\raymo\\Documents\\GitHub\\SnakeByte4546_2018\\TeamCode\\build\\intermediates\\res\\merged\\debug\\raw\\chimedisconnect.wav",
-        "source": "/Users/sopa/Desktop/SnakeByte4546_2018/C:\\Users\\raymo\\.android\\build-cache\\e2b7644c4d211b1ee9f2a9a05ee1c94fd9462049\\output\\res\\raw\\chimedisconnect.wav"
->>>>>>> 39dd6e6c217aa0336371bc261fe83ebdea5ab9d5
+        "merged": "C:\\Users\\raymo\\Documents\\GitHub\\SnakeByte4546_2018\\TeamCode\\build\\intermediates\\res\\merged\\debug\\raw\\texture_vertex_shader.glsl",
+        "source": "C:\\Users\\raymo\\.android\\build-cache\\f222e8854e47f9148b72d4a7daed1da1c6cb8c4c\\output\\res\\raw\\texture_vertex_shader.glsl"
     },
     {
-        "merged": "/Users/sopa/Desktop/SnakeByte4546_2018/TeamCode/build/intermediates/res/merged/debug/raw/nxtstartupsound.wav",
-        "source": "/Users/sopa/.android/build-cache/3210110eb5364b27a2c205984c6c06a15f4696b4/output/res/raw/nxtstartupsound.wav"
-    },
-    {
-<<<<<<< HEAD
         "merged": "C:\\Users\\raymo\\Documents\\GitHub\\SnakeByte4546_2018\\TeamCode\\build\\intermediates\\res\\merged\\debug\\raw\\warningmessage.wav",
         "source": "C:\\Users\\raymo\\.android\\build-cache\\e2b7644c4d211b1ee9f2a9a05ee1c94fd9462049\\output\\res\\raw\\warningmessage.wav"
     },
@@ -157,53 +130,5 @@
     {
         "merged": "C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\C:\\Users\\raymo\\Documents\\GitHub\\SnakeByte4546_2018\\TeamCode\\build\\intermediates\\res\\merged\\debug\\raw\\cube_mesh_vertex_shader.glsl",
         "source": "C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\C:\\Users\\raymo\\.android\\build-cache\\f222e8854e47f9148b72d4a7daed1da1c6cb8c4c\\output\\res\\raw\\cube_mesh_vertex_shader.glsl"
-=======
-        "merged": "/Users/sopa/Desktop/SnakeByte4546_2018/TeamCode/build/intermediates/res/merged/debug/raw/simple_vertex_shader.glsl",
-        "source": "/Users/sopa/.android/build-cache/7fc2725273c16c4a620bfc8fad0a54242df5bedc/output/res/raw/simple_vertex_shader.glsl"
-    },
-    {
-        "merged": "/Users/sopa/Desktop/SnakeByte4546_2018/C:\\Users\\raymo\\Documents\\GitHub\\SnakeByte4546_2018\\TeamCode\\build\\intermediates\\res\\merged\\debug\\raw\\texture_fragment_shader.glsl",
-        "source": "/Users/sopa/Desktop/SnakeByte4546_2018/C:\\Users\\raymo\\.android\\build-cache\\f222e8854e47f9148b72d4a7daed1da1c6cb8c4c\\output\\res\\raw\\texture_fragment_shader.glsl"
-    },
-    {
-        "merged": "/Users/sopa/Desktop/SnakeByte4546_2018/C:\\Users\\raymo\\Documents\\GitHub\\SnakeByte4546_2018\\TeamCode\\build\\intermediates\\res\\merged\\debug\\raw\\chimeconnect.wav",
-        "source": "/Users/sopa/Desktop/SnakeByte4546_2018/C:\\Users\\raymo\\.android\\build-cache\\e2b7644c4d211b1ee9f2a9a05ee1c94fd9462049\\output\\res\\raw\\chimeconnect.wav"
-    },
-    {
-        "merged": "/Users/sopa/Desktop/SnakeByte4546_2018/TeamCode/build/intermediates/res/merged/debug/raw/errormessage.wav",
-        "source": "/Users/sopa/.android/build-cache/3210110eb5364b27a2c205984c6c06a15f4696b4/output/res/raw/errormessage.wav"
-    },
-    {
-        "merged": "/Users/sopa/Desktop/SnakeByte4546_2018/TeamCode/build/intermediates/res/merged/debug/raw/color_fragment_shader.glsl",
-        "source": "/Users/sopa/.android/build-cache/7fc2725273c16c4a620bfc8fad0a54242df5bedc/output/res/raw/color_fragment_shader.glsl"
-    },
-    {
-        "merged": "/Users/sopa/Desktop/SnakeByte4546_2018/TeamCode/build/intermediates/res/merged/debug/raw/chimedisconnect.wav",
-        "source": "/Users/sopa/.android/build-cache/3210110eb5364b27a2c205984c6c06a15f4696b4/output/res/raw/chimedisconnect.wav"
-    },
-    {
-        "merged": "/Users/sopa/Desktop/SnakeByte4546_2018/C:\\Users\\raymo\\Documents\\GitHub\\SnakeByte4546_2018\\TeamCode\\build\\intermediates\\res\\merged\\debug\\raw\\simple_vertex_shader.glsl",
-        "source": "/Users/sopa/Desktop/SnakeByte4546_2018/C:\\Users\\raymo\\.android\\build-cache\\f222e8854e47f9148b72d4a7daed1da1c6cb8c4c\\output\\res\\raw\\simple_vertex_shader.glsl"
-    },
-    {
-        "merged": "/Users/sopa/Desktop/SnakeByte4546_2018/TeamCode/build/intermediates/res/merged/debug/raw/cube_mesh_fragment_shader.glsl",
-        "source": "/Users/sopa/.android/build-cache/7fc2725273c16c4a620bfc8fad0a54242df5bedc/output/res/raw/cube_mesh_fragment_shader.glsl"
-    },
-    {
-        "merged": "/Users/sopa/Desktop/SnakeByte4546_2018/TeamCode/build/intermediates/res/merged/debug/raw/warningmessage.wav",
-        "source": "/Users/sopa/.android/build-cache/3210110eb5364b27a2c205984c6c06a15f4696b4/output/res/raw/warningmessage.wav"
-    },
-    {
-        "merged": "/Users/sopa/Desktop/SnakeByte4546_2018/C:\\Users\\raymo\\Documents\\GitHub\\SnakeByte4546_2018\\TeamCode\\build\\intermediates\\res\\merged\\debug\\raw\\texture_vertex_shader.glsl",
-        "source": "/Users/sopa/Desktop/SnakeByte4546_2018/C:\\Users\\raymo\\.android\\build-cache\\f222e8854e47f9148b72d4a7daed1da1c6cb8c4c\\output\\res\\raw\\texture_vertex_shader.glsl"
-    },
-    {
-        "merged": "/Users/sopa/Desktop/SnakeByte4546_2018/C:\\Users\\raymo\\Documents\\GitHub\\SnakeByte4546_2018\\TeamCode\\build\\intermediates\\res\\merged\\debug\\raw\\warningmessage.wav",
-        "source": "/Users/sopa/Desktop/SnakeByte4546_2018/C:\\Users\\raymo\\.android\\build-cache\\e2b7644c4d211b1ee9f2a9a05ee1c94fd9462049\\output\\res\\raw\\warningmessage.wav"
-    },
-    {
-        "merged": "/Users/sopa/Desktop/SnakeByte4546_2018/TeamCode/build/intermediates/res/merged/debug/raw/cube_mesh_vertex_shader.glsl",
-        "source": "/Users/sopa/.android/build-cache/7fc2725273c16c4a620bfc8fad0a54242df5bedc/output/res/raw/cube_mesh_vertex_shader.glsl"
->>>>>>> 39dd6e6c217aa0336371bc261fe83ebdea5ab9d5
     }
 ]
