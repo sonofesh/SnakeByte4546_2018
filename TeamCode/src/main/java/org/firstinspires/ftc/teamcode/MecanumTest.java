@@ -2,12 +2,14 @@ package org.firstinspires.ftc.teamcode;
 
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
+import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import com.qualcomm.robotcore.hardware.DcMotor;
 
 /**
  * Created by sopa on 9/12/17.
  */
 
+@TeleOp (name = "Mecanum Test", group = "TeleOp")
 public class MecanumTest extends OpMode {
     double velocity = 0;
     double rotation = 0;
@@ -43,8 +45,8 @@ public class MecanumTest extends OpMode {
     }
 
     public double getStrafe() {
-        if(Math.abs(gamepad1.left_stick_y) > .05)
-            return gamepad1.left_stick_y;
+        if(Math.abs(gamepad1.left_stick_x) > .05)
+            return gamepad1.left_stick_x;
         return 0;
     }
 
