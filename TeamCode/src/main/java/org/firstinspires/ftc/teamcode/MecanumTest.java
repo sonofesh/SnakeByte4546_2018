@@ -33,20 +33,20 @@ public class MecanumTest extends OpMode {
     }
 
     public double getVelocity() {
+        if (Math.abs(gamepad1.left_stick_x) > .05)
+            return gamepad1.left_stick_x;
+        return 0;
+    }
+
+    public double getRotation() {
         if(Math.abs(gamepad1.right_stick_y) > .05)
             return gamepad1.right_stick_y;
         return 0;
     }
 
-    public double getRotation() {
+    public double getStrafe() {
         if(Math.abs(gamepad1.right_stick_x) > .05)
             return gamepad1.right_stick_x;
-        return 0;
-    }
-
-    public double getStrafe() {
-        if(Math.abs(gamepad1.left_stick_x) > .05)
-            return gamepad1.left_stick_x;
         return 0;
     }
 
