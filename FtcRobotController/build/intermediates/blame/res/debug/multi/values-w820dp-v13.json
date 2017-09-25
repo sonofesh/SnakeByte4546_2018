@@ -1,6 +1,5 @@
 [
     {
-<<<<<<< HEAD
         "outputFile": "C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\C:\\Users\\raymo\\Documents\\GitHub\\SnakeByte4546_2018\\FtcRobotController\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-w820dp-v13\\values-w820dp-v13.xml",
         "map": [
             {
@@ -50,9 +49,6 @@
     },
     {
         "outputFile": "C:\\Users\\raymo\\Documents\\GitHub\\SnakeByte4546_2018\\FtcRobotController\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-w820dp-v13\\values-w820dp-v13.xml",
-=======
-        "outputFile": "/Users/sopa/Desktop/SnakeByte4546_2018/FtcRobotController/build/intermediates/incremental/mergeDebugResources/merged.dir/values-w820dp-v13/values-w820dp-v13.xml",
->>>>>>> 39dd6e6c217aa0336371bc261fe83ebdea5ab9d5
         "map": [
             {
                 "to": {
@@ -63,31 +59,7 @@
                     "endOffset": 108
                 },
                 "from": {
-                    "file": "/Users/sopa/Desktop/SnakeByte4546_2018/FtcRobotController/src/main/res/values-w820dp/dimens.xml",
-                    "position": {
-                        "startLine": 37,
-                        "startColumn": 4,
-                        "startOffset": 1940,
-                        "endColumn": 57,
-                        "endOffset": 1993
-                    }
-                }
-            }
-        ]
-    },
-    {
-        "outputFile": "/Users/sopa/Desktop/SnakeByte4546_2018/C:\\Users\\raymo\\Documents\\GitHub\\SnakeByte4546_2018\\FtcRobotController\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-w820dp-v13\\values-w820dp-v13.xml",
-        "map": [
-            {
-                "to": {
-                    "startLine": 2,
-                    "startColumn": 4,
-                    "startOffset": 55,
-                    "endColumn": 57,
-                    "endOffset": 108
-                },
-                "from": {
-                    "file": "/Users/sopa/Desktop/SnakeByte4546_2018/C:\\Users\\raymo\\Documents\\GitHub\\SnakeByte4546_2018\\FtcRobotController\\src\\main\\res\\values-w820dp\\dimens.xml",
+                    "file": "C:\\Users\\raymo\\Documents\\GitHub\\SnakeByte4546_2018\\FtcRobotController\\src\\main\\res\\values-w820dp\\dimens.xml",
                     "position": {
                         "startLine": 37,
                         "startColumn": 4,
