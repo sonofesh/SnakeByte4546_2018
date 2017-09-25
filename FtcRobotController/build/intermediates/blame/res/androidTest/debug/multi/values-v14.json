@@ -1,31 +1,5 @@
 [
     {
-        "outputFile": "C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\C:\\Users\\raymo\\Documents\\GitHub\\SnakeByte4546_2018\\FtcRobotController\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-v14\\values-v14.xml",
-        "map": [
-            {
-                "to": {
-                    "startLine": 2,
-                    "startColumn": 4,
-                    "startOffset": 55,
-                    "endLine": 4,
-                    "endColumn": 12,
-                    "endOffset": 201
-                },
-                "from": {
-                    "file": "C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\C:\\Users\\raymo\\.android\\build-cache\\f222e8854e47f9148b72d4a7daed1da1c6cb8c4c\\output\\res\\values-v14\\values-v14.xml",
-                    "position": {
-                        "startLine": 2,
-                        "startColumn": 4,
-                        "startOffset": 55,
-                        "endLine": 4,
-                        "endColumn": 12,
-                        "endOffset": 201
-                    }
-                }
-            }
-        ]
-    },
-    {
         "outputFile": "C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\FtcRobotController\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-v14\\values-v14.xml",
         "map": [
             {
@@ -39,6 +13,32 @@
                 },
                 "from": {
                     "file": "C:\\Users\\sopa\\.android\\build-cache\\7fc2725273c16c4a620bfc8fad0a54242df5bedc\\output\\res\\values-v14\\values-v14.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 55,
+                        "endLine": 4,
+                        "endColumn": 12,
+                        "endOffset": 201
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "outputFile": "C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\C:\\Users\\raymo\\Documents\\GitHub\\SnakeByte4546_2018\\FtcRobotController\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-v14\\values-v14.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endLine": 4,
+                    "endColumn": 12,
+                    "endOffset": 201
+                },
+                "from": {
+                    "file": "C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\C:\\Users\\raymo\\.android\\build-cache\\f222e8854e47f9148b72d4a7daed1da1c6cb8c4c\\output\\res\\values-v14\\values-v14.xml",
                     "position": {
                         "startLine": 2,
                         "startColumn": 4,
