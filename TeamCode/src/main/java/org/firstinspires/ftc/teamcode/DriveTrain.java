@@ -43,10 +43,10 @@ public abstract class DriveTrain extends LinearOpMode {
     }
 
     public void setPower(double velocity, double rotation, double strafe){
-        FL.setPower(velocity - rotation - strafe);
-        FR.setPower(velocity + rotation + strafe);
-        BL.setPower(velocity - rotation + strafe);
-        BR.setPower(velocity + rotation - strafe);
+        FL.setPower(rotation - velocity - strafe);
+        FR.setPower(rotation + velocity + strafe);
+        BL.setPower(rotation - velocity + strafe);
+        BR.setPower(rotation + velocity - strafe);
     }
 
     public void setZero() {
