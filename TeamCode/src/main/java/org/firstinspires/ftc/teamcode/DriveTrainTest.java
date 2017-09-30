@@ -9,28 +9,17 @@ import com.qualcomm.robotcore.eventloop.opmode.OpMode;
  */
 
 
-@Autonomous(name = "ProteinIsMyAuto")
-public class DriveTrainTest extends DriveTrain {
+@Autonomous(name = "DriveTrain", group = "Autonomous")
+public class DriveTrainTest extends AutoOpMode {
     @Override
     public void runOpMode() throws InterruptedException {
         initialize();
-       /* moveForward(1);
-        sleep(800);
-        setZero();
-        turn(1);
-        sleep(700);
-        setZero();
-        moveForward(1);
-        sleep(400);
-        setZero();
-        moveForward(-1);
-        sleep(400);
-        setZero();*/
-        setPower(0.5, 0, calculateStrafe(0.5, 45);
-        sleep(1000);
-        setZero();
-
-       ))
-
+        telemetry.addData("drivetrain", "init");
+        telemetry.update();
+        waitForStart();
+        for(int i = 0; i < 3; i++) {
+            turn(.2, 45);
+            sleep(8000);
+        }
     }
 }
