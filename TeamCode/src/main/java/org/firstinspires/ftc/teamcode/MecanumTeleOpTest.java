@@ -21,6 +21,7 @@ public class MecanumTeleOpTest extends OpMode {
 
     @Override
     public void init() {
+        //FR is port 3, FL is port 2, BR is port 1, BL is port 0
         FL = hardwareMap.dcMotor.get("FL");
         FR = hardwareMap.dcMotor.get("FR");
         BR = hardwareMap.dcMotor.get("BR");
@@ -54,9 +55,9 @@ public class MecanumTeleOpTest extends OpMode {
         velocity = getVelocity();
         rotation = getRotation();
         strafe = getStrafe();
-        FL.setPower(velocity - rotation + strafe);
-        FR.setPower(-velocity - rotation + strafe);
-        BL.setPower(velocity - rotation - strafe);
-        BR.setPower(-velocity - rotation - strafe);
+        FL.setPower(velocity - rotation - strafe);
+        FR.setPower(-velocity - rotation - strafe);
+        BL.setPower(velocity - rotation + strafe);
+        BR.setPower(-velocity - rotation + strafe);
     }
 }

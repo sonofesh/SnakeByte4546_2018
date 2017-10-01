@@ -46,7 +46,9 @@ public abstract class AutoOpMode extends LinearOpMode {
         imu = hardwareMap.get(BNO055IMU.class, "imu");
         imu.initialize(parameters);
         //color sensor init
+        //
         colorSensor = hardwareMap.colorSensor.get("color");
+
     }
 
     public void setPower(double velocity, double rotation, double strafe){
