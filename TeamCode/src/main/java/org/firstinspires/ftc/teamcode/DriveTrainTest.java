@@ -19,8 +19,8 @@ public class DriveTrainTest extends AutoOpMode
         telemetry.update();
         waitForStart();
         for(int i = 0; i < 4; i++) {
-            turn(.2, 45 );
-            sleep(8000);
+            turn( .2, 45 );
+            sleep(1000);
         }
     }
 }
