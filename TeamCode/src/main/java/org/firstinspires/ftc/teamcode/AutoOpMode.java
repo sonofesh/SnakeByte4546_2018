@@ -25,7 +25,7 @@ public abstract class AutoOpMode extends LinearOpMode {
     DcMotor BR;
     BNO055IMU imu;
     ColorSensor colorSensor;
-    //ColorSensor colorSensor2;
+    ColorSensor colorSensor2;
     int recCount = 0;
 
     public void initialize() {
@@ -49,7 +49,9 @@ public abstract class AutoOpMode extends LinearOpMode {
         imu.initialize(parameters);
         //color sensor init
         colorSensor = hardwareMap.colorSensor.get("color");
-        //colorSensor2 = hardwareMap.colorSensor.get("color2");
+        colorSensor2 = hardwareMap.colorSensor.get("color2");
+        //colorSensor i2c address is 0 x 30. colorSensor2 is 0 x 40
+
 
     }
 

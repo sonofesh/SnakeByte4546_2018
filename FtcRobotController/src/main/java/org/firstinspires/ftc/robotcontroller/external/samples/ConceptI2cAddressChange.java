@@ -44,7 +44,6 @@ import java.util.concurrent.locks.Lock;
  * An example of a linear op mode that shows how to change the I2C address.
  */
 @TeleOp(name = "Concept: I2c Address Change", group = "Concept")
-@Disabled
 public class ConceptI2cAddressChange extends LinearOpMode {
 
   public static final int ADDRESS_SET_NEW_I2C_ADDRESS = 0x70;
@@ -79,7 +78,7 @@ public class ConceptI2cAddressChange extends LinearOpMode {
   public static final int BUFFER_CHANGE_ADDRESS_LENGTH = 0x03;
 
   // The port where your sensor is connected.
-  int port = 5;
+  int port = 2;
 
   byte[] readCache;
   Lock readLock;
@@ -91,7 +90,7 @@ public class ConceptI2cAddressChange extends LinearOpMode {
   // Different hardware may have different rules.
   // Be sure to read the requirements for the hardware you're using!
   // If you use an invalid address, you may make your device completely unusable.
-  I2cAddr newAddress = I2cAddr.create8bit(0x42);
+  I2cAddr newAddress = I2cAddr.create8bit(0x10);
 
   DeviceInterfaceModule dim;
 
