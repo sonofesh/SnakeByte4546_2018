@@ -7,6 +7,7 @@ import com.qualcomm.hardware.bosch.JustLoggingAccelerationIntegrator;
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.hardware.ColorSensor;
 import com.qualcomm.robotcore.hardware.DcMotor;
+import com.qualcomm.robotcore.hardware.I2cAddr;
 
 import org.firstinspires.ftc.robotcore.external.navigation.Orientation;
 
@@ -24,6 +25,7 @@ public abstract class AutoOpMode extends LinearOpMode {
     DcMotor BR;
     BNO055IMU imu;
     ColorSensor colorSensor;
+    //ColorSensor colorSensor2;
     int recCount = 0;
 
     public void initialize() {
@@ -46,8 +48,8 @@ public abstract class AutoOpMode extends LinearOpMode {
         imu = hardwareMap.get(BNO055IMU.class, "imu");
         imu.initialize(parameters);
         //color sensor init
-        //
         colorSensor = hardwareMap.colorSensor.get("color");
+        //colorSensor2 = hardwareMap.colorSensor.get("color2");
 
     }
 

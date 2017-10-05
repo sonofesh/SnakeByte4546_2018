@@ -20,7 +20,7 @@ public class ColorSensorTest extends AutoOpMode {
                 telemetry.update();
             }
             else{
-                telemetry.addData("Color", "none");
+                telemetry.addData("Color", "None");
                 telemetry.update();
             }
 

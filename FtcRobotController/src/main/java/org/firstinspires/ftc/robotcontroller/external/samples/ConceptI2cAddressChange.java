@@ -169,6 +169,7 @@ public class ConceptI2cAddressChange extends LinearOpMode {
       sleep(1000);
     }
 
+
     telemetry.addData("I2cAddressChange", "Successfully changed the I2C address. New address: 8bit=0x%02x", newAddress.get8Bit());
     telemetry.update();
     RobotLog.i("Successfully changed the I2C address." + String.format("New address: 8bit=0x%02x", newAddress.get8Bit()));
