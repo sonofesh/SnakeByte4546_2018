@@ -9,7 +9,19 @@ import com.qualcomm.robotcore.hardware.ColorSensor;
 import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.hardware.I2cAddr;
 
+import org.firstinspires.ftc.robotcore.external.ClassFactory;
+import org.firstinspires.ftc.robotcore.external.matrices.OpenGLMatrix;
+import org.firstinspires.ftc.robotcore.external.matrices.VectorF;
+import org.firstinspires.ftc.robotcore.external.navigation.AngleUnit;
+import org.firstinspires.ftc.robotcore.external.navigation.AxesOrder;
+import org.firstinspires.ftc.robotcore.external.navigation.AxesReference;
 import org.firstinspires.ftc.robotcore.external.navigation.Orientation;
+import org.firstinspires.ftc.robotcore.external.navigation.RelicRecoveryVuMark;
+import org.firstinspires.ftc.robotcore.external.navigation.VuMarkInstanceId;
+import org.firstinspires.ftc.robotcore.external.navigation.VuforiaLocalizer;
+import org.firstinspires.ftc.robotcore.external.navigation.VuforiaTrackable;
+import org.firstinspires.ftc.robotcore.external.navigation.VuforiaTrackableDefaultListener;
+import org.firstinspires.ftc.robotcore.external.navigation.VuforiaTrackables;
 
 /**
  * Created by raymo on 9/24/2017.
@@ -27,9 +39,14 @@ public abstract class AutoOpMode extends LinearOpMode {
     ColorSensor colorSensor;
     ColorSensor colorSensor2;
     int recCount = 0;
+    VuforiaLocalizer vuforia;
+    VuforiaTrackables relicTrackables;
+    VuforiaTrackable relicTemplate;
+    String cryptoboxKey;
+
 
     public void initialize() {
-        FL = hardwareMap.dcMotor.get("FL");
+        /*FL = hardwareMap.dcMotor.get("FL");
         FR = hardwareMap.dcMotor.get("FR");
         BL = hardwareMap.dcMotor.get("BL");
         BR = hardwareMap.dcMotor.get("BR");
@@ -51,8 +68,19 @@ public abstract class AutoOpMode extends LinearOpMode {
         colorSensor = hardwareMap.colorSensor.get("color");
         colorSensor2 = hardwareMap.colorSensor.get("color2");
         //colorSensor i2c address is 0 x 30. colorSensor2 is 0 x 40
-
-
+        */
+        int cameraMonitorViewId = hardwareMap.appContext.getResources().getIdentifier("cameraMonitorViewId", "id", hardwareMap.appContext.getPackageName());
+        VuforiaLocalizer.Parameters parameters = new VuforiaLocalizer.Parameters(cameraMonitorViewId);
+        //key
+        parameters.vuforiaLicenseKey = "AQ1iIdT/////AAAAGZ0U6OKRfU8tpKf9LKl/7DM85y3Wp791rb6q3WwHfYaY53vqKSjAO8wU2FgulWnDt6gLqu9hB33z1reejMz/NyfL8u11QZlMIbimmnP/v4hvoXZWu0p62V9eMG3R2PQ3Z7rZ0qK8HwsQYE/0jmBhTy0D17M4fWpNW64QQnMJqFxq/N1BXm32PEInYDHBYs7WUrHL5oa9xeSSurxUq/TqDpeJwQM+1/GYppdAqzbcM1gi3yzU7JDLdNtOZ6+lbi5uXlU++GnFvQaEXL9uVcnTwMEgBhBng6oOEVoEDXiSUBuZHuMRGZmHfVXSNE3m1UXWyEdPTlMRI5vfEwfsBHmQTmvYr/jJjng3+tBpu85Q1ivo";
+        //using front camera so it's easier to use the phone during competition
+        parameters.cameraDirection = VuforiaLocalizer.CameraDirection.BACK;
+        //init
+        this.vuforia = ClassFactory.createVuforiaLocalizer(parameters);
+        VuforiaTrackables relicTrackables = this.vuforia.loadTrackablesFromAsset("RelicVuMark");
+        VuforiaTrackable relicTemplate = relicTrackables.get(0);
+        relicTemplate.setName("relicVuMarkTemplate");
+        relicTrackables.activate();
     }
 
     public void setPower(double velocity, double rotation, double strafe){
@@ -195,6 +223,32 @@ public abstract class AutoOpMode extends LinearOpMode {
             idle();
         }
         setZero();
+    }
+    public void scanImage()
+    {
+        RelicRecoveryVuMark vuMark = RelicRecoveryVuMark.from(relicTemplate);
+        if (vuMark != RelicRecoveryVuMark.UNKNOWN) {
+            if (vuMark == RelicRecoveryVuMark.LEFT) {
+                cryptoboxKey = "left";
+                telemetry.addData("Key", "Left");
+                telemetry.update();
+            }
+            else if (vuMark == RelicRecoveryVuMark.CENTER){
+                cryptoboxKey = "center";
+                telemetry.addData("Key", "Center");
+                telemetry.update();
+            }
+            else if (vuMark == RelicRecoveryVuMark.RIGHT){
+                cryptoboxKey = "right";
+                telemetry.addData("Key", "Right");
+                telemetry.update();
+            }
+        }
+        else{
+            cryptoboxKey = "unknown";
+            telemetry.addData("Key","Unknown");
+            telemetry.update();
+        }
     }
 
 

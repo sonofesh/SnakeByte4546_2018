@@ -8,9 +8,11 @@ import com.qualcomm.robotcore.eventloop.opmode.Autonomous;
 @Autonomous(name = "ColorSensor", group = "Autonomous")
 public class ColorSensorTest extends AutoOpMode {
     @Override
-    public void runOpMode() throws InterruptedException {
+    public void runOpMode(){
         initialize();
         while (opModeIsActive()) {
+            scanImage();
+            /*
             if ((colorSensor.red() > colorSensor.blue()) && (colorSensor.red() > 15)){
                 telemetry.addData("red", colorSensor.red());
                 telemetry.update();
@@ -22,8 +24,9 @@ public class ColorSensorTest extends AutoOpMode {
             else{
                 telemetry.addData("Color", "None");
                 telemetry.update();
+            */
             }
 
-        }
+
     }
 }
