@@ -224,7 +224,8 @@ public abstract class AutoOpMode extends LinearOpMode {
         }
         setZero();
     }
-    public void scanImage()
+
+    public void scanImage() throws InterruptedException
     {
         RelicRecoveryVuMark vuMark = RelicRecoveryVuMark.from(relicTemplate);
         if (vuMark != RelicRecoveryVuMark.UNKNOWN) {
@@ -249,6 +250,18 @@ public abstract class AutoOpMode extends LinearOpMode {
             telemetry.addData("Key","Unknown");
             telemetry.update();
         }
+    }
+
+    public void moveToDropBlock(String place) throws InterruptedException {
+        scanImage();
+        if (place.equals("left")) {
+            moveForward(.2, 1000);
+        }
+        else if (place.equals("middle")) {
+            moveForward(.2,2000);
+        }
+        else
+            moveForward(.2,2000);
     }
 
 
