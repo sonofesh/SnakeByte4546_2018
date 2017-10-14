@@ -51,7 +51,9 @@ public abstract class AutoOpMode extends LinearOpMode {
 
 
     public void initialize() {
-        /*FL = hardwareMap.dcMotor.get("FL");
+        /*
+        //FL is 0, BL is 1, FR is 2, BR is 3
+        FL = hardwareMap.dcMotor.get("FL");
         FR = hardwareMap.dcMotor.get("FR");
         BL = hardwareMap.dcMotor.get("BL");
         BR = hardwareMap.dcMotor.get("BR");
@@ -146,7 +148,7 @@ public abstract class AutoOpMode extends LinearOpMode {
     public String chooseColor(char c) {
         //hitting blue
         if(c == 98) {
-            if(getBlue(colorFront) > getBlue(colorBack)) {
+            if(getBlue(colorFront) < getBlue(colorBack)) {
                 telemetry.addData("hit", "forwards");
                 telemetry.update();
                 return "forwards";
@@ -161,12 +163,15 @@ public abstract class AutoOpMode extends LinearOpMode {
                 if (recCount < 2)
                     recCount++;
                     chooseColor(c);
+                telemetry.addData("ColorSensors", "broken");
+                telemetry.update();
                 return "broken";
+
             }
         }
         //hitting red
         if(c == 114) {
-            if(getRed(colorFront) > getRed(colorBack)) {
+            if(getRed(colorFront) < getRed(colorBack)) {
                 telemetry.addData("hit", "forwards");
                 telemetry.update();
                 return "forwards";
@@ -181,6 +186,8 @@ public abstract class AutoOpMode extends LinearOpMode {
                 if (recCount < 2)
                     recCount++;
                     chooseColor(c);
+                telemetry.addData("ColorSensors", "broken");
+                telemetry.update();
                 return "broken";
             }
         }
