@@ -12,7 +12,7 @@ import org.firstinspires.ftc.robotcore.external.navigation.VuforiaTrackables;
  * Created by raymo on 9/30/2017.
  */
 @Autonomous(name = "ColorSensor", group = "Autonomous")
-public class ColorSensorTest extends AutoOpMode {
+public class VufTest extends AutoOpMode {
     VuforiaLocalizer vuforia;
     @Override
     public void runOpMode(){
