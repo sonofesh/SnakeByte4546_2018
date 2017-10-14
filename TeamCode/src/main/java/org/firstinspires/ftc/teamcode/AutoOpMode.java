@@ -8,6 +8,7 @@ import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.hardware.ColorSensor;
 import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.hardware.I2cAddr;
+import com.qualcomm.robotcore.hardware.Servo;
 
 import org.firstinspires.ftc.robotcore.external.ClassFactory;
 import org.firstinspires.ftc.robotcore.external.matrices.OpenGLMatrix;
@@ -31,18 +32,22 @@ public abstract class AutoOpMode extends LinearOpMode {
     double velocity = 0;
     double rotation = 0;
     double strafe = 0;
+    VuforiaLocalizer vuforia;
     DcMotor FL;
     DcMotor FR;
     DcMotor BL;
     DcMotor BR;
+    Servo Jewel;
     BNO055IMU imu;
-    ColorSensor colorSensor;
-    ColorSensor colorSensor2;
+    ColorSensor colorFront;
+    ColorSensor colorBack;
     int recCount = 0;
-    VuforiaLocalizer vuforia;
+    int cameraMonitorViewId;
     VuforiaTrackables relicTrackables;
     VuforiaTrackable relicTemplate;
     String cryptoboxKey;
+    VuforiaLocalizer.Parameters parameters;
+    char alliance;
 
 
     public void initialize() {
@@ -50,6 +55,7 @@ public abstract class AutoOpMode extends LinearOpMode {
         FR = hardwareMap.dcMotor.get("FR");
         BL = hardwareMap.dcMotor.get("BL");
         BR = hardwareMap.dcMotor.get("BR");
+        Jewel = hardwareMap.servo.get("Jewel");
         FL.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODERS);
         FR.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODERS);
         BL.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODERS);
@@ -65,21 +71,24 @@ public abstract class AutoOpMode extends LinearOpMode {
         imu = hardwareMap.get(BNO055IMU.class, "imu");
         imu.initialize(parameters);
         //color sensor init
-        colorSensor = hardwareMap.colorSensor.get("color");
-        colorSensor2 = hardwareMap.colorSensor.get("color2");
-        //colorSensor i2c address is 0 x 30. colorSensor2 is 0 x 40
+        colorFront = hardwareMap.colorSensor.get("color");
+        colorBack = hardwareMap.colorSensor.get("color2");
+        char alliance = 'r';
         */
+    }
+
+    public void prepareVuforia(){
         int cameraMonitorViewId = hardwareMap.appContext.getResources().getIdentifier("cameraMonitorViewId", "id", hardwareMap.appContext.getPackageName());
         VuforiaLocalizer.Parameters parameters = new VuforiaLocalizer.Parameters(cameraMonitorViewId);
         //key
         parameters.vuforiaLicenseKey = "AQ1iIdT/////AAAAGZ0U6OKRfU8tpKf9LKl/7DM85y3Wp791rb6q3WwHfYaY53vqKSjAO8wU2FgulWnDt6gLqu9hB33z1reejMz/NyfL8u11QZlMIbimmnP/v4hvoXZWu0p62V9eMG3R2PQ3Z7rZ0qK8HwsQYE/0jmBhTy0D17M4fWpNW64QQnMJqFxq/N1BXm32PEInYDHBYs7WUrHL5oa9xeSSurxUq/TqDpeJwQM+1/GYppdAqzbcM1gi3yzU7JDLdNtOZ6+lbi5uXlU++GnFvQaEXL9uVcnTwMEgBhBng6oOEVoEDXiSUBuZHuMRGZmHfVXSNE3m1UXWyEdPTlMRI5vfEwfsBHmQTmvYr/jJjng3+tBpu85Q1ivo";
         //using front camera so it's easier to use the phone during competition
-        parameters.cameraDirection = VuforiaLocalizer.CameraDirection.BACK;
+        parameters.cameraDirection = VuforiaLocalizer.CameraDirection.FRONT;
         //init
         this.vuforia = ClassFactory.createVuforiaLocalizer(parameters);
         VuforiaTrackables relicTrackables = this.vuforia.loadTrackablesFromAsset("RelicVuMark");
         VuforiaTrackable relicTemplate = relicTrackables.get(0);
-        relicTemplate.setName("relicVuMarkTemplate");
+        relicTemplate.setName("relicVuMarkTemplate"); // can help in debugging; otherwise not necessary
         relicTrackables.activate();
     }
 
@@ -117,56 +126,73 @@ public abstract class AutoOpMode extends LinearOpMode {
     }
 
     public int getRed(ColorSensor color) {
-        return colorSensor.red();
+        return color.red();
     }
 
     public int getBlue(ColorSensor color) {
-        return colorSensor.blue();
+        return color.blue();
+    }
+
+    public void lowerJewel() {
+        Jewel.setPosition(1);
+    }
+
+    public void raiseJewel() {
+        Jewel.setPosition(0);
     }
 
     //true is right
     //false is left
-    public String chooseColor(ColorSensor colorLeft, ColorSensor colorRight, char c) {
-        recCount++;
+    public String chooseColor(char c) {
         //hitting blue
         if(c == 98) {
-            if(getBlue(colorRight) > getBlue(colorLeft)) {
-                telemetry.addData("hit", "right");
+            if(getBlue(colorFront) > getBlue(colorBack)) {
+                telemetry.addData("hit", "forwards");
                 telemetry.update();
-                return "right";
+                return "forwards";
             }
-            else if(getBlue(colorLeft) > getBlue(colorRight)) {
-                telemetry.addData("hit", "left");
+            else if(getBlue(colorFront) > getBlue(colorBack)) {
+                telemetry.addData("hit", "backwards");
                 telemetry.update();
-                return "left";
+                return "backwards";
             }
             else {
                 sleep(1000);
                 if (recCount < 2)
-                    chooseColor(colorLeft, colorRight, c);
+                    recCount++;
+                    chooseColor(c);
                 return "broken";
             }
         }
         //hitting red
         if(c == 114) {
-            if(getRed(colorRight) > getRed(colorLeft)) {
-                telemetry.addData("hit", "right");
+            if(getRed(colorFront) > getRed(colorBack)) {
+                telemetry.addData("hit", "forwards");
                 telemetry.update();
-                return "right";
+                return "forwards";
             }
-            else if(getRed(colorLeft) > getRed(colorRight)) {
-                telemetry.addData("hit", "left");
+            else if(getRed(colorFront) > getRed(colorBack)) {
+                telemetry.addData("hit", "backwards");
                 telemetry.update();
-                return "left";
+                return "backwards";
             }
             else {
                 sleep(1000);
                 if (recCount < 2)
-                    chooseColor(colorLeft, colorRight, c);
+                    recCount++;
+                    chooseColor(c);
                 return "broken";
             }
         }
         return "broken";
+    }
+
+    public void hitJewel() throws InterruptedException {
+        if (chooseColor(alliance).equals("forwards"))
+            moveForward(0.5,500);
+        if (chooseColor(alliance).equals("backwards"))
+            moveForward(-0.5,500);
+
     }
 
     public int getAvgEncoder(){
@@ -225,29 +251,29 @@ public abstract class AutoOpMode extends LinearOpMode {
         setZero();
     }
 
-    public void scanImage() throws InterruptedException
+    public void scanImage()
     {
         RelicRecoveryVuMark vuMark = RelicRecoveryVuMark.from(relicTemplate);
         if (vuMark != RelicRecoveryVuMark.UNKNOWN) {
-            if (vuMark == RelicRecoveryVuMark.LEFT) {
+            if (vuMark == RelicRecoveryVuMark.LEFT){
+                telemetry.addData("Key","left");
+                telemetry.update();
                 cryptoboxKey = "left";
-                telemetry.addData("Key", "Left");
-                telemetry.update();
             }
-            else if (vuMark == RelicRecoveryVuMark.CENTER){
+            if (vuMark == RelicRecoveryVuMark.CENTER){
+                telemetry.addData("Key","center");
+                telemetry.update();
                 cryptoboxKey = "center";
-                telemetry.addData("Key", "Center");
-                telemetry.update();
             }
-            else if (vuMark == RelicRecoveryVuMark.RIGHT){
+            if (vuMark == RelicRecoveryVuMark.RIGHT){
+                telemetry.addData("Key","right");
+                telemetry.update();
                 cryptoboxKey = "right";
-                telemetry.addData("Key", "Right");
-                telemetry.update();
             }
+
         }
-        else{
-            cryptoboxKey = "unknown";
-            telemetry.addData("Key","Unknown");
+        else {
+            telemetry.addData("Key", "unknown");
             telemetry.update();
         }
     }
