@@ -13,6 +13,7 @@ import com.qualcomm.robotcore.hardware.DcMotor;
 public class ShoulderControlsTeleOp extends OpMode {
     double rightMotion = 0;
     double leftMotion = 0;
+    boolean halfSpeed = false;
     DcMotor FL;
     DcMotor FR;
     DcMotor BL;
@@ -53,6 +54,15 @@ public class ShoulderControlsTeleOp extends OpMode {
         return 0;
     }
 
+    public void toggleHalfSpeed() {
+        if (gamepad1.a){
+            if (halfSpeed)
+                halfSpeed = false;
+            if (!halfSpeed)
+                halfSpeed = true;
+        }
+    }
+
     public double getRightShoulder()
     {
         if (gamepad1.right_bumper)
@@ -60,12 +70,19 @@ public class ShoulderControlsTeleOp extends OpMode {
         return 0;
     }
 
+    public double getHalfSpeed(){
+        if (halfSpeed)
+            return 0.5;
+        return 1;
+    }
+
     public void setPower() {
         rightMotion = getRightVelocity();
         leftMotion = getLeftVelocity();
-        FL.setPower(getLeftVelocity() - getLeftShoulder() + getRightShoulder());
-        FR.setPower(-getRightVelocity() - getLeftShoulder() + getRightShoulder());
-        BL.setPower(getLeftVelocity() + getLeftShoulder() - getRightShoulder());
-        BR.setPower(-getRightVelocity() + getLeftShoulder() - getRightShoulder());
+        toggleHalfSpeed();
+        FL.setPower(getHalfSpeed()*(getLeftVelocity() - getLeftShoulder() + getRightShoulder()));
+        FR.setPower(getHalfSpeed()*(-getRightVelocity() - getLeftShoulder() + getRightShoulder()));
+        BL.setPower(getHalfSpeed()*(getLeftVelocity() + getLeftShoulder() - getRightShoulder()));
+        BR.setPower(getHalfSpeed()*(-getRightVelocity() + getLeftShoulder() - getRightShoulder()));
     }
 }

@@ -37,6 +37,9 @@ public abstract class AutoOpMode extends LinearOpMode {
     DcMotor FR;
     DcMotor BL;
     DcMotor BR;
+    DcMotor LeftRelic;
+    DcMotor RightRelic;
+    DcMotor Manipulator;
     Servo Jewel;
     BNO055IMU imu;
     ColorSensor colorFront;
@@ -51,12 +54,16 @@ public abstract class AutoOpMode extends LinearOpMode {
 
 
     public void initialize() {
-        /*
+
+        //LeftRelic is 0, RightRelic is 1, 2 is Manipulator
         //FL is 0, BL is 1, FR is 2, BR is 3
         FL = hardwareMap.dcMotor.get("FL");
         FR = hardwareMap.dcMotor.get("FR");
         BL = hardwareMap.dcMotor.get("BL");
         BR = hardwareMap.dcMotor.get("BR");
+        LeftRelic = hardwareMap.dcMotor.get("LRelic");
+        RightRelic = hardwareMap.dcMotor.get("RRelic");
+        Manipulator = hardwareMap.dcMotor.get("Mani");
         Jewel = hardwareMap.servo.get("Jewel");
         FL.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODERS);
         FR.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODERS);
@@ -76,7 +83,7 @@ public abstract class AutoOpMode extends LinearOpMode {
         colorFront = hardwareMap.colorSensor.get("color");
         colorBack = hardwareMap.colorSensor.get("color2");
         char alliance = 'r';
-        */
+
     }
 
     public void prepareVuforia(){
@@ -194,13 +201,7 @@ public abstract class AutoOpMode extends LinearOpMode {
         return "broken";
     }
 
-    public void hitJewel() throws InterruptedException {
-        if (chooseColor(alliance).equals("forwards"))
-            moveForward(0.5,500);
-        if (chooseColor(alliance).equals("backwards"))
-            moveForward(-0.5,500);
 
-    }
 
     public int getAvgEncoder(){
         return (Math.abs(FL.getCurrentPosition()) + Math.abs(FR.getCurrentPosition()))/2;
@@ -226,7 +227,7 @@ public abstract class AutoOpMode extends LinearOpMode {
         setZero();
         if (Math.abs(getAvgEncoder() - startPos) > distance + 50){
             telemetry.addData("overshoot", "fix");
-            telemetry.update();
+                telemetry.update();
         }
     }
 
