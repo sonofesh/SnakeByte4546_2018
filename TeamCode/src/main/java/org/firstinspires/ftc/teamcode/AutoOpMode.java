@@ -37,9 +37,6 @@ public abstract class AutoOpMode extends LinearOpMode {
     DcMotor FR;
     DcMotor BL;
     DcMotor BR;
-    DcMotor LeftRelic;
-    DcMotor RightRelic;
-    DcMotor Manipulator;
     Servo Jewel;
     BNO055IMU imu;
     ColorSensor colorFront;
@@ -54,16 +51,11 @@ public abstract class AutoOpMode extends LinearOpMode {
 
 
     public void initialize() {
-
-        //LeftRelic is 0, RightRelic is 1, 2 is Manipulator
         //FL is 0, BL is 1, FR is 2, BR is 3
         FL = hardwareMap.dcMotor.get("FL");
         FR = hardwareMap.dcMotor.get("FR");
         BL = hardwareMap.dcMotor.get("BL");
         BR = hardwareMap.dcMotor.get("BR");
-        LeftRelic = hardwareMap.dcMotor.get("LRelic");
-        RightRelic = hardwareMap.dcMotor.get("RRelic");
-        Manipulator = hardwareMap.dcMotor.get("Mani");
         Jewel = hardwareMap.servo.get("Jewel");
         FL.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODERS);
         FR.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODERS);
@@ -82,8 +74,6 @@ public abstract class AutoOpMode extends LinearOpMode {
         //color sensor init
         colorFront = hardwareMap.colorSensor.get("color");
         colorBack = hardwareMap.colorSensor.get("color2");
-        char alliance = 'r';
-
     }
 
     public void prepareVuforia(){
@@ -120,6 +110,11 @@ public abstract class AutoOpMode extends LinearOpMode {
     }
 
     public double getGyroYaw() throws InterruptedException{
+        Orientation angles = imu.getAngularOrientation();
+        return (angles.firstAngle * -1);
+    }
+
+    public double getGyroPitch() throws InterruptedException {
         Orientation angles = imu.getAngularOrientation();
         return (angles.firstAngle * -1);
     }
@@ -169,7 +164,7 @@ public abstract class AutoOpMode extends LinearOpMode {
                 sleep(1000);
                 if (recCount < 2)
                     recCount++;
-                    chooseColor(c);
+                chooseColor(c);
                 telemetry.addData("ColorSensors", "broken");
                 telemetry.update();
                 return "broken";
@@ -192,7 +187,7 @@ public abstract class AutoOpMode extends LinearOpMode {
                 sleep(1000);
                 if (recCount < 2)
                     recCount++;
-                    chooseColor(c);
+                chooseColor(c);
                 telemetry.addData("ColorSensors", "broken");
                 telemetry.update();
                 return "broken";
@@ -200,7 +195,6 @@ public abstract class AutoOpMode extends LinearOpMode {
         }
         return "broken";
     }
-
 
 
     public int getAvgEncoder(){
@@ -227,7 +221,7 @@ public abstract class AutoOpMode extends LinearOpMode {
         setZero();
         if (Math.abs(getAvgEncoder() - startPos) > distance + 50){
             telemetry.addData("overshoot", "fix");
-                telemetry.update();
+            telemetry.update();
         }
     }
 
@@ -298,7 +292,19 @@ public abstract class AutoOpMode extends LinearOpMode {
             moveForward(.2,2000);
     }
 
+    //need to test
+    public void hitThePhix(String color) throws InterruptedException {
+        if(color.equals("blue)")) {
+            Jewel.setPosition(1);
+            moveForward(.2, 750);
+        }
+        else {
+            Jewel.setPosition(1);
+            moveForward(-.2, 750);
+        }
+
+
+    }
+
 
 }
-
-
