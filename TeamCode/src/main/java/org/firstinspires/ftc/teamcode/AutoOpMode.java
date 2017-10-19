@@ -164,7 +164,7 @@ public abstract class AutoOpMode extends LinearOpMode {
                 sleep(1000);
                 if (recCount < 2)
                     recCount++;
-                chooseColor(c);
+                    chooseColor(c);
                 telemetry.addData("ColorSensors", "broken");
                 telemetry.update();
                 return "broken";
@@ -187,7 +187,7 @@ public abstract class AutoOpMode extends LinearOpMode {
                 sleep(1000);
                 if (recCount < 2)
                     recCount++;
-                chooseColor(c);
+                    chooseColor(c);
                 telemetry.addData("ColorSensors", "broken");
                 telemetry.update();
                 return "broken";
@@ -196,6 +196,13 @@ public abstract class AutoOpMode extends LinearOpMode {
         return "broken";
     }
 
+    public void hitJewel() throws InterruptedException {
+        if (chooseColor(alliance).equals("forwards"))
+            moveForward(0.5,500);
+        if (chooseColor(alliance).equals("backwards"))
+            moveForward(-0.5,500);
+
+    }
 
     public int getAvgEncoder(){
         return (Math.abs(FL.getCurrentPosition()) + Math.abs(FR.getCurrentPosition()))/2;
@@ -308,3 +315,5 @@ public abstract class AutoOpMode extends LinearOpMode {
 
 
 }
+
+
