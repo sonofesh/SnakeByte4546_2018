@@ -51,7 +51,6 @@ public abstract class AutoOpMode extends LinearOpMode {
 
 
     public void initialize() {
-        /*
         //FL is 0, BL is 1, FR is 2, BR is 3
         FL = hardwareMap.dcMotor.get("FL");
         FR = hardwareMap.dcMotor.get("FR");
@@ -75,8 +74,6 @@ public abstract class AutoOpMode extends LinearOpMode {
         //color sensor init
         colorFront = hardwareMap.colorSensor.get("color");
         colorBack = hardwareMap.colorSensor.get("color2");
-        char alliance = 'r';
-        */
     }
 
     public void prepareVuforia(){
@@ -113,6 +110,11 @@ public abstract class AutoOpMode extends LinearOpMode {
     }
 
     public double getGyroYaw() throws InterruptedException{
+        Orientation angles = imu.getAngularOrientation();
+        return (angles.firstAngle * -1);
+    }
+
+    public double getGyroPitch() throws InterruptedException {
         Orientation angles = imu.getAngularOrientation();
         return (angles.firstAngle * -1);
     }
@@ -295,6 +297,20 @@ public abstract class AutoOpMode extends LinearOpMode {
         }
         else
             moveForward(.2,2000);
+    }
+
+    //need to test
+    public void hitThePhix(String color) throws InterruptedException {
+        if(color.equals("blue)")) {
+            Jewel.setPosition(1);
+            moveForward(.2, 750);
+        }
+        else {
+            Jewel.setPosition(1);
+            moveForward(-.2, 750);
+        }
+
+
     }
 
 
