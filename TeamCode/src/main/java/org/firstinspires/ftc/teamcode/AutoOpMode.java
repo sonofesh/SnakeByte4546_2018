@@ -52,6 +52,7 @@ public abstract class AutoOpMode extends LinearOpMode {
 
     public void initialize() {
         //FL is 0, BL is 1, FR is 2, BR is 3
+        //Jewel is 0
         FL = hardwareMap.dcMotor.get("FL");
         FR = hardwareMap.dcMotor.get("FR");
         BL = hardwareMap.dcMotor.get("BL");
@@ -302,16 +303,17 @@ public abstract class AutoOpMode extends LinearOpMode {
     //need to test
     public void hitThePhix(String color) throws InterruptedException {
         if(color.equals("blue)")) {
-            Jewel.setPosition(1);
+            raiseJewel();
             moveForward(.2, 750);
         }
         else {
-            Jewel.setPosition(1);
+            raiseJewel();
             moveForward(-.2, 750);
         }
 
 
     }
+
 
 
 }

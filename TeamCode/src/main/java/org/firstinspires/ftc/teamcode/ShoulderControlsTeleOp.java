@@ -4,6 +4,7 @@ import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import com.qualcomm.robotcore.hardware.DcMotor;
+import com.qualcomm.robotcore.hardware.Servo;
 
 /**
  * Created by raymo on 10/4/17.
@@ -18,6 +19,11 @@ public class ShoulderControlsTeleOp extends OpMode {
     DcMotor FR;
     DcMotor BL;
     DcMotor BR;
+    DcMotor leftLift;
+    DcMotor rightLift;
+    Servo leftMani;
+    Servo rightMani;
+    boolean liftOut = false;
 
     @Override
     public void init() {
@@ -26,10 +32,13 @@ public class ShoulderControlsTeleOp extends OpMode {
         FR = hardwareMap.dcMotor.get("FR");
         BR = hardwareMap.dcMotor.get("BR");
         BL = hardwareMap.dcMotor.get("BL");
+        leftMani = hardwareMap.servo.get("LMani");
+        rightMani = hardwareMap.servo.get("RMani");
     }
 
     @Override
     public void loop() {
+        toggleHalfSpeed();
         setPower();
     }
 
@@ -55,13 +64,15 @@ public class ShoulderControlsTeleOp extends OpMode {
     }
 
     public void toggleHalfSpeed() {
-        if (gamepad1.a){
+        if (gamepad1.x){
             if (halfSpeed)
                 halfSpeed = false;
-            if (!halfSpeed)
+            else if (!halfSpeed)
                 halfSpeed = true;
         }
     }
+
+
 
     public double getRightShoulder()
     {
@@ -76,13 +87,11 @@ public class ShoulderControlsTeleOp extends OpMode {
         return 1;
     }
 
+   
     public void setPower() {
-        rightMotion = getRightVelocity();
-        leftMotion = getLeftVelocity();
-        toggleHalfSpeed();
-        FL.setPower(getHalfSpeed()*(getLeftVelocity() - getLeftShoulder() + getRightShoulder()));
-        FR.setPower(getHalfSpeed()*(-getRightVelocity() - getLeftShoulder() + getRightShoulder()));
-        BL.setPower(getHalfSpeed()*(getLeftVelocity() + getLeftShoulder() - getRightShoulder()));
-        BR.setPower(getHalfSpeed()*(-getRightVelocity() + getLeftShoulder() - getRightShoulder()));
+        FL.setPower(getHalfSpeed()*(getLeftVelocity() + getLeftShoulder() - getRightShoulder()));
+        FR.setPower(getHalfSpeed()*(-getRightVelocity() + getLeftShoulder() - getRightShoulder()));
+        BL.setPower(getHalfSpeed()*(getLeftVelocity() - getLeftShoulder() + getRightShoulder()));
+        BR.setPower(getHalfSpeed()*(-getRightVelocity() - getLeftShoulder() + getRightShoulder()));
     }
 }
