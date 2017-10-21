@@ -2,6 +2,7 @@ package org.firstinspires.ftc.teamcode;
 
 import com.qualcomm.robotcore.eventloop.opmode.Autonomous;
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
+import com.qualcomm.robotcore.hardware.CRServo;
 import com.qualcomm.robotcore.hardware.Servo;
 
 /**
@@ -9,15 +10,14 @@ import com.qualcomm.robotcore.hardware.Servo;
  */
 @Autonomous(name = "Servo-urban")
 public class ServoTest extends LinearOpMode {
-    Servo testServo;
+    CRServo leftArm;
+    CRServo rightArm;
     @Override
     public void runOpMode() throws InterruptedException {
-        testServo = hardwareMap.servo.get("jHitter");
-        testServo.setPosition(0.5);
-        sleep(500);
-        testServo.setPosition(0);
-        sleep(500);
-        testServo.setPosition(1);
+        leftArm = hardwareMap.crservo.get("LRelicArm");
+        rightArm = hardwareMap.crservo.get("RRelicArm");
+        leftArm.setPower(0.4);
+        rightArm.setPower(-0.4);
 
     }
 }

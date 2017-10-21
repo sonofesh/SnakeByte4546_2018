@@ -19,27 +19,42 @@ public class ShoulderControlsTeleOp extends OpMode {
     DcMotor FR;
     DcMotor BL;
     DcMotor BR;
-    DcMotor leftLift;
-    DcMotor rightLift;
+    DcMotor leftLiftSlide;
+    DcMotor rightLiftSlide;
     Servo leftMani;
     Servo rightMani;
     boolean liftOut = false;
+    Servo leftArm;
+    Servo rightArm;
+
 
     @Override
     public void init() {
-        //FR is port 3, FL is port 2, BR is port 1, BL is port 0
+        //Expansion Hub 1: Motor 0 is BR, Motor 1 is FR, Motor 2 is BL, Motor 3 is FL
+        //Expansion Hub 1: Servo 0 is RRelicArm, Servo 1 is LRelioArm
+        //Expansion Hub 2:
+        //Expansion Hub 2: Servo 4 is LMani, Servo 5 is RMani
         FL = hardwareMap.dcMotor.get("FL");
         FR = hardwareMap.dcMotor.get("FR");
         BR = hardwareMap.dcMotor.get("BR");
         BL = hardwareMap.dcMotor.get("BL");
+        leftArm = hardwareMap.servo.get("LRelicArm");
+        rightArm = hardwareMap.servo.get("RRelicArm");
         leftMani = hardwareMap.servo.get("LMani");
         rightMani = hardwareMap.servo.get("RMani");
+        leftLiftSlide = hardwareMap.dcMotor.get("LSlide");
+        rightLiftSlide = hardwareMap.dcMotor.get("RSlide");
+        telemetry.addData("Initialization", "done");
+        telemetry.update();
     }
 
     @Override
     public void loop() {
-        toggleHalfSpeed();
         setPower();
+        setArmPower();
+        setManiPower();
+        setLiftSlide();
+        toggleHalfSpeed();
     }
 
     public double getRightVelocity()
@@ -63,12 +78,19 @@ public class ShoulderControlsTeleOp extends OpMode {
         return 0;
     }
 
+
     public void toggleHalfSpeed() {
-        if (gamepad1.x){
-            if (halfSpeed)
+        if (gamepad1.x) {
+            if (halfSpeed) {
                 halfSpeed = false;
-            else if (!halfSpeed)
+                telemetry.addData("halfspeed", "disabled");
+                telemetry.update();
+            } else if (!halfSpeed) {
                 halfSpeed = true;
+                telemetry.addData("halfspeed", "enabled");
+                telemetry.update();
+            }
+
         }
     }
 
@@ -87,11 +109,58 @@ public class ShoulderControlsTeleOp extends OpMode {
         return 1;
     }
 
-   
+    public void setArmPower() {
+        if (gamepad2.right_stick_y > 0.1) {
+            leftArm.setPosition(1);
+            rightArm.setPosition(0);
+        }
+        else if (gamepad2.right_stick_y < -0.1){
+            leftArm.setPosition(0);
+            rightArm.setPosition(1);
+        }
+        else{
+            leftArm.setPosition(0.5);
+            rightArm.setPosition(0.5);
+        }
+    }
+
+
     public void setPower() {
         FL.setPower(getHalfSpeed()*(getLeftVelocity() + getLeftShoulder() - getRightShoulder()));
         FR.setPower(getHalfSpeed()*(-getRightVelocity() + getLeftShoulder() - getRightShoulder()));
         BL.setPower(getHalfSpeed()*(getLeftVelocity() - getLeftShoulder() + getRightShoulder()));
         BR.setPower(getHalfSpeed()*(-getRightVelocity() - getLeftShoulder() + getRightShoulder()));
+    }
+
+    public void setLiftSlide(){
+        if (gamepad2.left_stick_y > 0.1){
+            leftLiftSlide.setPower(-1);
+        }
+        else if (gamepad2.left_stick_y < -0.1){
+            rightLiftSlide.setPower(1);
+        }
+        else{
+            rightLiftSlide.setPower(0);
+            leftLiftSlide.setPower(0);
+        }
+    }
+
+    public void setManiPower(){
+        if (gamepad2.right_trigger > 0.1){
+            leftMani.setPosition(1);
+            rightMani.setPosition(0);
+            telemetry.addData("mani", "open");
+            telemetry.update();
+        }
+        else if (gamepad2.left_trigger > 0.1){
+            leftMani.setPosition(0);
+            rightMani.setPosition(1);
+            telemetry.addData("mani", "closed");
+            telemetry.update();
+        }
+        else{
+            leftMani.setPosition(0.5);
+            rightMani.setPosition(0.5);
+        }
     }
 }
