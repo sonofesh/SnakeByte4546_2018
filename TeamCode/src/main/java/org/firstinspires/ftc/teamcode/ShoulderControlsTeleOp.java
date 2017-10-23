@@ -26,7 +26,10 @@ public class ShoulderControlsTeleOp extends OpMode {
     boolean liftOut = false;
     Servo leftArm;
     Servo rightArm;
-
+    DcMotor liftMani;
+    final int delayToggle = 500;
+    long currentTime;
+    long lastTime;
 
     @Override
     public void init() {
@@ -44,6 +47,7 @@ public class ShoulderControlsTeleOp extends OpMode {
         rightMani = hardwareMap.servo.get("RMani");
         leftLiftSlide = hardwareMap.dcMotor.get("LSlide");
         rightLiftSlide = hardwareMap.dcMotor.get("RSlide");
+        liftMani = hardwareMap.dcMotor.get("liftMani");
         telemetry.addData("Initialization", "done");
         telemetry.update();
     }
@@ -55,6 +59,7 @@ public class ShoulderControlsTeleOp extends OpMode {
         setManiPower();
         setLiftSlide();
         toggleHalfSpeed();
+        raiseMani();
     }
 
     public double getRightVelocity()
@@ -80,7 +85,8 @@ public class ShoulderControlsTeleOp extends OpMode {
 
 
     public void toggleHalfSpeed() {
-        if (gamepad1.x) {
+        currentTime = System.currentTimeMillis();
+        if (gamepad1.x && (currentTime - lastTime < delayToggle)) {
             if (halfSpeed) {
                 halfSpeed = false;
                 telemetry.addData("halfspeed", "disabled");
@@ -90,11 +96,9 @@ public class ShoulderControlsTeleOp extends OpMode {
                 telemetry.addData("halfspeed", "enabled");
                 telemetry.update();
             }
-
+            lastTime = System.currentTimeMillis();
         }
     }
-
-
 
     public double getRightShoulder()
     {
@@ -146,21 +150,33 @@ public class ShoulderControlsTeleOp extends OpMode {
     }
 
     public void setManiPower(){
-        if (gamepad2.right_trigger > 0.1){
+        if (gamepad2.a){
             leftMani.setPosition(1);
             rightMani.setPosition(0);
             telemetry.addData("mani", "open");
             telemetry.update();
         }
-        else if (gamepad2.left_trigger > 0.1){
+        else if (gamepad2.b){
             leftMani.setPosition(0);
             rightMani.setPosition(1);
             telemetry.addData("mani", "closed");
             telemetry.update();
         }
         else{
-            leftMani.setPosition(0.5);
-            rightMani.setPosition(0.5);
+            leftMani.setPosition(0.7);
+            rightMani.setPosition(0.7);
+        }
+    }
+
+    public void raiseMani(){
+        if (gamepad2.right_trigger > 0.1){
+            liftMani.setPower(-1);
+        }
+        else if (gamepad2.left_trigger > 0.1){
+            liftMani.setPower(1);
+        }
+        else{
+            liftMani.setPower(0);
         }
     }
 }
