@@ -6,6 +6,8 @@ import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.hardware.Servo;
 
+import static java.lang.Thread.sleep;
+
 /**
  * Created by raymo on 10/4/17.
  */
@@ -24,12 +26,15 @@ public class ShoulderControlsTeleOp extends OpMode {
     Servo leftMani;
     Servo rightMani;
     boolean liftOut = false;
+    boolean closed = false;
     Servo leftArm;
     Servo rightArm;
     DcMotor liftMani;
     final int delayToggle = 500;
     long currentTime;
     long lastTime;
+    long btime;
+    long closeTime;
 
     @Override
     public void init() {
@@ -48,6 +53,8 @@ public class ShoulderControlsTeleOp extends OpMode {
         leftLiftSlide = hardwareMap.dcMotor.get("LSlide");
         rightLiftSlide = hardwareMap.dcMotor.get("RSlide");
         liftMani = hardwareMap.dcMotor.get("liftMani");
+        rightMani.setDirection(Servo.Direction.FORWARD);
+        leftMani.setDirection(Servo.Direction.REVERSE);
         telemetry.addData("Initialization", "done");
         telemetry.update();
     }
@@ -149,27 +156,38 @@ public class ShoulderControlsTeleOp extends OpMode {
         }
     }
 
+
     public void setManiPower(){
-        if (gamepad2.a){
+        if (gamepad2.b){
             leftMani.setPosition(1);
-            rightMani.setPosition(0);
-            telemetry.addData("mani", "open");
-            telemetry.update();
-        }
-        else if (gamepad2.b){
-            leftMani.setPosition(0);
             rightMani.setPosition(1);
-            telemetry.addData("mani", "closed");
-            telemetry.update();
+            closeTime = System.currentTimeMillis();
+        }
+        else if (System.currentTimeMillis() - closeTime < 1000){
+            leftMani.setPosition(0.3);
+            rightMani.setPosition(0.3);
         }
         else{
-            leftMani.setPosition(0.7);
-            rightMani.setPosition(0.7);
+            leftMani.setPosition(0.5);
+            rightMani.setPosition(0.5);
         }
     }
 
+
     public void raiseMani(){
         if (gamepad2.right_trigger > 0.1){
+            liftMani.setPower(-1);
+        }
+        else if (gamepad2.left_trigger > 0.1){
+            liftMani.setPower(1);
+        }
+        else{
+            liftMani.setPower(0);
+        }
+    }
+
+    public void grabRelic(){
+        if (gamepad2.a){
             liftMani.setPower(-1);
         }
         else if (gamepad2.left_trigger > 0.1){
