@@ -15,6 +15,7 @@ public class ShoulderControlsTeleOp extends OpMode {
     double rightMotion = 0;
     double leftMotion = 0;
     boolean halfSpeed = false;
+    final int delayToggle = 500;
     DcMotor FL;
     DcMotor FR;
     DcMotor BL;
@@ -26,8 +27,6 @@ public class ShoulderControlsTeleOp extends OpMode {
     boolean liftOut = false;
     Servo leftArm;
     Servo rightArm;
-    DcMotor liftMani;
-    final int delayToggle = 500;
     long currentTime;
     long lastTime;
 
@@ -86,12 +85,13 @@ public class ShoulderControlsTeleOp extends OpMode {
 
     public void toggleHalfSpeed() {
         currentTime = System.currentTimeMillis();
-        if (gamepad1.x && (currentTime - lastTime < delayToggle)) {
+        if (gamepad1.x && (currentTime - lastTime) < delayToggle) {
             if (halfSpeed) {
                 halfSpeed = false;
                 telemetry.addData("halfspeed", "disabled");
                 telemetry.update();
-            } else if (!halfSpeed) {
+            }
+            else if (!halfSpeed) {
                 halfSpeed = true;
                 telemetry.addData("halfspeed", "enabled");
                 telemetry.update();
