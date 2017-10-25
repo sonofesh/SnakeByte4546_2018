@@ -46,7 +46,7 @@ public class ShoulderControlsTeleOp extends OpMode {
         rightMani = hardwareMap.servo.get("RMani");
         leftLiftSlide = hardwareMap.dcMotor.get("LSlide");
         rightLiftSlide = hardwareMap.dcMotor.get("RSlide");
-        liftMani = hardwareMap.dcMotor.get("liftMani");
+        leftMani = hardwareMap.servo.get("liftMani");
         telemetry.addData("Initialization", "done");
         telemetry.update();
     }
@@ -58,7 +58,7 @@ public class ShoulderControlsTeleOp extends OpMode {
         setManiPower();
         setLiftSlide();
         toggleHalfSpeed();
-        raiseMani();
+        //raiseMani();
     }
 
     public double getRightVelocity()
@@ -168,15 +168,15 @@ public class ShoulderControlsTeleOp extends OpMode {
         }
     }
 
-    public void raiseMani(){
-        if (gamepad2.right_trigger > 0.1){
-            liftMani.setPower(-1);
-        }
-        else if (gamepad2.left_trigger > 0.1){
-            liftMani.setPower(1);
-        }
-        else{
-            liftMani.setPower(0);
-        }
-    }
+//    public void raiseMani(){
+//        if (gamepad2.right_trigger > 0.1){
+//            leftMani.setPower(-1);
+//        }
+//        else if (gamepad2.left_trigger > 0.1){
+//            leftMani.setPower(1);
+//        }
+//        else{
+//            leftMani.setPower(0);
+//        }
+//    }
 }
