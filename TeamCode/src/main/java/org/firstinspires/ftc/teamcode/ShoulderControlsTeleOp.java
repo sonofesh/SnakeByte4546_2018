@@ -23,6 +23,8 @@ public class ShoulderControlsTeleOp extends OpMode {
     DcMotor BR;
     DcMotor leftLiftSlide;
     DcMotor rightLiftSlide;
+    Servo RRelic;
+    Servo LRelic;
     Servo leftMani;
     Servo rightMani;
     boolean liftOut = false;
@@ -55,6 +57,8 @@ public class ShoulderControlsTeleOp extends OpMode {
         liftMani = hardwareMap.dcMotor.get("liftMani");
         rightMani.setDirection(Servo.Direction.FORWARD);
         leftMani.setDirection(Servo.Direction.REVERSE);
+        RRelic = hardwareMap.servo.get("RRelic");
+        LRelic = hardwareMap.servo.get("LRelic");
         telemetry.addData("Initialization", "done");
         telemetry.update();
     }
@@ -67,6 +71,7 @@ public class ShoulderControlsTeleOp extends OpMode {
         setLiftSlide();
         toggleHalfSpeed();
         raiseMani();
+        grabRelic();
     }
 
     public double getRightVelocity()
@@ -187,14 +192,13 @@ public class ShoulderControlsTeleOp extends OpMode {
     }
 
     public void grabRelic(){
-        if (gamepad2.a){
-            liftMani.setPower(-1);
+        if (gamepad2.right_bumper){
+            RRelic.setPosition(0);
+            LRelic.setPosition(1);
         }
-        else if (gamepad2.left_trigger > 0.1){
-            liftMani.setPower(1);
-        }
-        else{
-            liftMani.setPower(0);
+        if (gamepad2.left_bumper) {
+            LRelic.setPosition(0);
+            RRelic.setPosition(1);
         }
     }
 }
