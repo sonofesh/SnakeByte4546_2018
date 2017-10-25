@@ -65,7 +65,7 @@ public class ShoulderControlsTeleOp extends OpMode {
         setManiPower();
         setLiftSlide();
         toggleHalfSpeed();
-        //raiseMani();
+        raiseMani();
     }
 
     public double getRightVelocity()
@@ -120,7 +120,7 @@ public class ShoulderControlsTeleOp extends OpMode {
         return 1;
     }
 
-    //joule hitter
+    //relic mover
     public void setArmPower() {
         if (gamepad2.right_stick_y > 0.1) {
             leftArm.setPosition(1);
@@ -174,21 +174,6 @@ public class ShoulderControlsTeleOp extends OpMode {
         else{
             leftMani.setPosition(0.7);
             rightMani.setPosition(0.7);
-        }
-    }
-
-    public void grapRelic() {
-        if(gamepad2.x) {
-            leftRelicPosition += .005;
-            rightRelicPosition -= .005;
-            leftRelic.setPosition(leftRelicPosition);
-            rightRelic.setPosition(rightRelicPosition);
-        }
-        if(gamepad2.b) {
-            leftRelicPosition -= .005;
-            rightRelicPosition += .005;
-            leftRelic.setPosition(leftRelicPosition);
-            rightRelic.setPosition(rightRelicPosition);
         }
     }
 
