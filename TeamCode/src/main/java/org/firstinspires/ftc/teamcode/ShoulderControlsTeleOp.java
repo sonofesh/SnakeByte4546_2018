@@ -34,6 +34,7 @@ public class ShoulderControlsTeleOp extends OpMode {
     double rightRelicPosition;
     long currentTime;
     long lastTime;
+    long closeTime;
 
     @Override
     public void init() {
@@ -66,6 +67,7 @@ public class ShoulderControlsTeleOp extends OpMode {
         setLiftSlide();
         toggleHalfSpeed();
         raiseMani();
+        grapRelic();
     }
 
     public double getRightVelocity()
@@ -120,7 +122,7 @@ public class ShoulderControlsTeleOp extends OpMode {
         return 1;
     }
 
-    //relic mover
+    //joule hitter
     public void setArmPower() {
         if (gamepad2.right_stick_y > 0.1) {
             leftArm.setPosition(1);
@@ -159,21 +161,33 @@ public class ShoulderControlsTeleOp extends OpMode {
 
     //clamp for glyphs
     public void setManiPower(){
-        if (gamepad2.a){
+        if (gamepad2.b){
             leftMani.setPosition(1);
-            rightMani.setPosition(0);
-            telemetry.addData("mani", "open");
-            telemetry.update();
-        }
-        else if (gamepad2.y){
-            leftMani.setPosition(0);
             rightMani.setPosition(1);
-            telemetry.addData("mani", "closed");
-            telemetry.update();
+            closeTime = System.currentTimeMillis();
+        }
+        else if (System.currentTimeMillis() - closeTime < 1000){
+            leftMani.setPosition(0.3);
+            rightMani.setPosition(0.3);
         }
         else{
-            leftMani.setPosition(0.7);
-            rightMani.setPosition(0.7);
+            leftMani.setPosition(0.5);
+            rightMani.setPosition(0.5);
+        }
+    }
+
+    public void grapRelic() {
+        if(gamepad2.x) {
+            leftRelicPosition += .005;
+            rightRelicPosition -= .005;
+            leftRelic.setPosition(leftRelicPosition);
+            rightRelic.setPosition(rightRelicPosition);
+        }
+        if(gamepad2.b) {
+            leftRelicPosition -= .005;
+            rightRelicPosition += .005;
+            leftRelic.setPosition(leftRelicPosition);
+            rightRelic.setPosition(rightRelicPosition);
         }
     }
 
