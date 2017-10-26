@@ -6,8 +6,6 @@ import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.hardware.Servo;
 
-import static java.lang.Thread.sleep;
-
 /**
  * Created by raymo on 10/4/17.
  */
@@ -17,26 +15,25 @@ public class ShoulderControlsTeleOp extends OpMode {
     double rightMotion = 0;
     double leftMotion = 0;
     boolean halfSpeed = false;
+    final int delayToggle = 500;
     DcMotor FL;
     DcMotor FR;
     DcMotor BL;
     DcMotor BR;
     DcMotor leftLiftSlide;
     DcMotor rightLiftSlide;
-    Servo RRelic;
-    Servo LRelic;
+    DcMotor liftMani;
     Servo leftMani;
     Servo rightMani;
     boolean liftOut = false;
-    boolean closed = false;
     Servo leftArm;
     Servo rightArm;
-    DcMotor liftMani;
-    final int delayToggle = 500;
+    Servo leftRelic;
+    Servo rightRelic;
+    double leftRelicPosition;
+    double rightRelicPosition;
     long currentTime;
     long lastTime;
-    long btime;
-    long closeTime;
 
     @Override
     public void init() {
@@ -50,15 +47,13 @@ public class ShoulderControlsTeleOp extends OpMode {
         BL = hardwareMap.dcMotor.get("BL");
         leftArm = hardwareMap.servo.get("LRelicArm");
         rightArm = hardwareMap.servo.get("RRelicArm");
+        leftRelic = hardwareMap.servo.get("LRelic");
+        rightRelic = hardwareMap.servo.get("RRelic");
         leftMani = hardwareMap.servo.get("LMani");
         rightMani = hardwareMap.servo.get("RMani");
         leftLiftSlide = hardwareMap.dcMotor.get("LSlide");
         rightLiftSlide = hardwareMap.dcMotor.get("RSlide");
         liftMani = hardwareMap.dcMotor.get("liftMani");
-        rightMani.setDirection(Servo.Direction.FORWARD);
-        leftMani.setDirection(Servo.Direction.REVERSE);
-        RRelic = hardwareMap.servo.get("RRelic");
-        LRelic = hardwareMap.servo.get("LRelic");
         telemetry.addData("Initialization", "done");
         telemetry.update();
     }
@@ -71,7 +66,6 @@ public class ShoulderControlsTeleOp extends OpMode {
         setLiftSlide();
         toggleHalfSpeed();
         raiseMani();
-        grabRelic();
     }
 
     public double getRightVelocity()
@@ -98,12 +92,13 @@ public class ShoulderControlsTeleOp extends OpMode {
 
     public void toggleHalfSpeed() {
         currentTime = System.currentTimeMillis();
-        if (gamepad1.x && (currentTime - lastTime < delayToggle)) {
+        if (gamepad1.x && (currentTime - lastTime) < delayToggle) {
             if (halfSpeed) {
                 halfSpeed = false;
                 telemetry.addData("halfspeed", "disabled");
                 telemetry.update();
-            } else if (!halfSpeed) {
+            }
+            else if (!halfSpeed) {
                 halfSpeed = true;
                 telemetry.addData("halfspeed", "enabled");
                 telemetry.update();
@@ -125,6 +120,7 @@ public class ShoulderControlsTeleOp extends OpMode {
         return 1;
     }
 
+    //relic mover
     public void setArmPower() {
         if (gamepad2.right_stick_y > 0.1) {
             leftArm.setPosition(1);
@@ -140,7 +136,6 @@ public class ShoulderControlsTeleOp extends OpMode {
         }
     }
 
-
     public void setPower() {
         FL.setPower(getHalfSpeed()*(getLeftVelocity() + getLeftShoulder() - getRightShoulder()));
         FR.setPower(getHalfSpeed()*(-getRightVelocity() + getLeftShoulder() - getRightShoulder()));
@@ -148,6 +143,7 @@ public class ShoulderControlsTeleOp extends OpMode {
         BR.setPower(getHalfSpeed()*(-getRightVelocity() - getLeftShoulder() + getRightShoulder()));
     }
 
+    //relic lift
     public void setLiftSlide(){
         if (gamepad2.left_stick_y > 0.1){
             leftLiftSlide.setPower(-1);
@@ -161,44 +157,35 @@ public class ShoulderControlsTeleOp extends OpMode {
         }
     }
 
-
+    //clamp for glyphs
     public void setManiPower(){
-        if (gamepad2.b){
+        if (gamepad2.a){
             leftMani.setPosition(1);
-            rightMani.setPosition(1);
-            closeTime = System.currentTimeMillis();
+            rightMani.setPosition(0);
+            telemetry.addData("mani", "open");
+            telemetry.update();
         }
-        else if (System.currentTimeMillis() - closeTime < 1000){
-            leftMani.setPosition(0.3);
-            rightMani.setPosition(0.3);
+        else if (gamepad2.y){
+            leftMani.setPosition(0);
+            rightMani.setPosition(1);
+            telemetry.addData("mani", "closed");
+            telemetry.update();
         }
         else{
-            leftMani.setPosition(0.5);
-            rightMani.setPosition(0.5);
+            leftMani.setPosition(0.7);
+            rightMani.setPosition(0.7);
         }
     }
 
-
-    public void raiseMani(){
-        if (gamepad2.right_trigger > 0.1){
+    public void raiseMani() {
+        if (gamepad2.dpad_down){
             liftMani.setPower(-1);
         }
-        else if (gamepad2.left_trigger > 0.1){
+        else if (gamepad2.dpad_up){
             liftMani.setPower(1);
         }
         else{
             liftMani.setPower(0);
-        }
-    }
-
-    public void grabRelic(){
-        if (gamepad2.right_bumper){
-            RRelic.setPosition(0);
-            LRelic.setPosition(1);
-        }
-        if (gamepad2.left_bumper) {
-            LRelic.setPosition(0);
-            RRelic.setPosition(1);
         }
     }
 }

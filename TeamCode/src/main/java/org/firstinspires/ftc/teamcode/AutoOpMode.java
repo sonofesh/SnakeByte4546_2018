@@ -117,17 +117,18 @@ public abstract class AutoOpMode extends LinearOpMode {
 
     public double getGyroPitch() throws InterruptedException {
         Orientation angles = imu.getAngularOrientation();
-        return (angles.firstAngle * -1);
+        return (angles.thirdAngle * -1);
     }
 
     public double getGyroYaw(double turn) throws InterruptedException{
         double turnAbs = Math.abs(turn);
         Orientation angles = imu.getAngularOrientation();
-        if (turnAbs > 270 && Math.abs(angles.firstAngle) < 90)
-            return (Math.abs(angles.firstAngle) - (turnAbs - 360));
-        else if (turnAbs < 90 && Math.abs(angles.firstAngle) > 270)
-            return ((Math.abs(angles.firstAngle) - 360) - turnAbs);
-        return (Math.abs(angles.firstAngle) - turnAbs);
+        return angles.firstAngle;
+//        if (turnAbs > 270 && Math.abs(angles.firstAngle) < 90)
+//            return (Math.abs(angles.firstAngle) - (turnAbs - 360));
+//        else if (turnAbs < 90 && Math.abs(angles.firstAngle) > 270)
+//            return ((Math.abs(angles.firstAngle) - 360) - turnAbs);
+//        return (Math.abs(angles.firstAngle) - turnAbs);
     }
 
     public int getRed(ColorSensor color) {
@@ -146,8 +147,10 @@ public abstract class AutoOpMode extends LinearOpMode {
         Jewel.setPosition(0);
     }
 
-    //true is right
-    //false is left
+    public void setAlliance(char c) {
+        alliance = c;
+    }
+
     public String chooseColor(char c) {
         //hitting blue
         if(c == 98) {
@@ -198,10 +201,14 @@ public abstract class AutoOpMode extends LinearOpMode {
     }
 
     public void hitJewel() throws InterruptedException {
-        if (chooseColor(alliance).equals("forwards"))
-            moveForward(0.5,500);
-        if (chooseColor(alliance).equals("backwards"))
-            moveForward(-0.5,500);
+        if (chooseColor(alliance).equals("forwards")) {
+            //park in safe zone
+            moveForward(0.25, 3000);
+        }
+        else if (chooseColor(alliance).equals("backwards")) {
+            moveForward(-0.25, 500);
+            moveForward(.25, 4000);
+        }
 
     }
 
@@ -300,19 +307,7 @@ public abstract class AutoOpMode extends LinearOpMode {
             moveForward(.2,2000);
     }
 
-    //need to test
-    public void hitThePhix(String color) throws InterruptedException {
-        if(color.equals("blue)")) {
-            raiseJewel();
-            moveForward(.2, 750);
-        }
-        else {
-            raiseJewel();
-            moveForward(-.2, 750);
-        }
 
-
-    }
 
 
 
