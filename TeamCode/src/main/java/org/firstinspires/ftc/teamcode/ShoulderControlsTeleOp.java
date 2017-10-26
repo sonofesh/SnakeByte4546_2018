@@ -25,6 +25,7 @@ public class ShoulderControlsTeleOp extends OpMode {
     DcMotor liftMani;
     Servo leftMani;
     Servo rightMani;
+    Servo jewelHitter;
     boolean liftOut = false;
     Servo leftArm;
     Servo rightArm;
@@ -35,13 +36,15 @@ public class ShoulderControlsTeleOp extends OpMode {
     long currentTime;
     long lastTime;
     long closeTime;
+    //jewelstate 0 is upright, 1 is near upright, 2 is position to hit jewel
+    int jewelState = 0;
 
     @Override
     public void init() {
         //Expansion Hub 1: Motor 0 is BR, Motor 1 is FR, Motor 2 is BL, Motor 3 is FL
         //Expansion Hub 1: Servo 0 is RRelicArm, Servo 1 is LRelioArm
         //Expansion Hub 2:
-        //Expansion Hub 2: Servo 4 is LMani, Servo 5 is RMani
+        //Expansion Hub 2: Servo 0 is JewelHitter
         FL = hardwareMap.dcMotor.get("FL");
         FR = hardwareMap.dcMotor.get("FR");
         BR = hardwareMap.dcMotor.get("BR");
@@ -52,9 +55,12 @@ public class ShoulderControlsTeleOp extends OpMode {
         rightRelic = hardwareMap.servo.get("RRelic");
         leftMani = hardwareMap.servo.get("LMani");
         rightMani = hardwareMap.servo.get("RMani");
+        rightMani.setDirection(Servo.Direction.FORWARD);
+        leftMani.setDirection(Servo.Direction.REVERSE);
         leftLiftSlide = hardwareMap.dcMotor.get("LSlide");
         rightLiftSlide = hardwareMap.dcMotor.get("RSlide");
         liftMani = hardwareMap.dcMotor.get("liftMani");
+        jewelHitter = hardwareMap.servo.get("jewelhitter");
         telemetry.addData("Initialization", "done");
         telemetry.update();
     }
@@ -68,6 +74,8 @@ public class ShoulderControlsTeleOp extends OpMode {
         toggleHalfSpeed();
         raiseMani();
         grapRelic();
+        //setJewelHitter();
+        //telemetry.addData("JewelHitter", jewelHitter.getPosition());
     }
 
     public double getRightVelocity()
@@ -122,7 +130,7 @@ public class ShoulderControlsTeleOp extends OpMode {
         return 1;
     }
 
-    //joule hitter
+    //Relic
     public void setArmPower() {
         if (gamepad2.right_stick_y > 0.1) {
             leftArm.setPosition(1);
@@ -137,6 +145,25 @@ public class ShoulderControlsTeleOp extends OpMode {
             rightArm.setPosition(0.5);
         }
     }
+
+    //Jewel Hitter (have not tested positions)
+    public void setJewelHitter(){
+        if (gamepad2.right_bumper){
+            if (jewelState == 0){
+                jewelHitter.setPosition(0.2);
+                jewelState = 1;
+            }
+            else if (jewelState == 1){
+                jewelHitter.setPosition(1);
+                jewelState = 2;
+            }
+            else if (jewelState == 2){
+                jewelHitter.setPosition(0);
+                jewelState = 0;
+            }
+        }
+    }
+
 
     public void setPower() {
         FL.setPower(getHalfSpeed()*(getLeftVelocity() + getLeftShoulder() - getRightShoulder()));
@@ -183,9 +210,9 @@ public class ShoulderControlsTeleOp extends OpMode {
             leftRelic.setPosition(leftRelicPosition);
             rightRelic.setPosition(rightRelicPosition);
         }
-        if(gamepad2.b) {
+        if(gamepad2.y) {
+            leftRelicPosition += .005;
             leftRelicPosition -= .005;
-            rightRelicPosition += .005;
             leftRelic.setPosition(leftRelicPosition);
             rightRelic.setPosition(rightRelicPosition);
         }
@@ -193,10 +220,10 @@ public class ShoulderControlsTeleOp extends OpMode {
 
     public void raiseMani() {
         if (gamepad2.dpad_down){
-            liftMani.setPower(-1);
+            liftMani.setPower(1);
         }
         else if (gamepad2.dpad_up){
-            liftMani.setPower(1);
+            liftMani.setPower(-1);
         }
         else{
             liftMani.setPower(0);
