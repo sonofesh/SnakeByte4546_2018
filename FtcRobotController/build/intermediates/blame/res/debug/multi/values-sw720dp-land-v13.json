@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "/Users/sopa/Desktop/SnakeByte4546_2018/FtcRobotController/build/intermediates/incremental/mergeDebugResources/merged.dir/values-sw720dp-land-v13/values-sw720dp-land-v13.xml",
+        "outputFile": "C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\C:\\Users\\raymo\\Documents\\GitHub\\SnakeByte4546_2018\\FtcRobotController\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sw720dp-land-v13\\values-sw720dp-land-v13.xml",
         "map": [
             {
                 "to": {
@@ -11,7 +11,31 @@
                     "endOffset": 109
                 },
                 "from": {
-                    "file": "/Users/sopa/Desktop/SnakeByte4546_2018/FtcRobotController/src/main/res/values-sw720dp-land/dimens.xml",
+                    "file": "C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\C:\\Users\\raymo\\Documents\\GitHub\\SnakeByte4546_2018\\FtcRobotController\\src\\main\\res\\values-sw720dp-land\\dimens.xml",
+                    "position": {
+                        "startLine": 39,
+                        "startColumn": 4,
+                        "startOffset": 1888,
+                        "endColumn": 58,
+                        "endOffset": 1942
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "outputFile": "C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\FtcRobotController\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sw720dp-land-v13\\values-sw720dp-land-v13.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 58,
+                    "endOffset": 109
+                },
+                "from": {
+                    "file": "C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\FtcRobotController\\src\\main\\res\\values-sw720dp-land\\dimens.xml",
                     "position": {
                         "startLine": 39,
                         "startColumn": 4,
@@ -24,7 +48,7 @@
         ]
     },
     {
-        "outputFile": "/Users/sopa/Desktop/SnakeByte4546_2018/C:\\Users\\raymo\\Documents\\GitHub\\SnakeByte4546_2018\\FtcRobotController\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sw720dp-land-v13\\values-sw720dp-land-v13.xml",
+        "outputFile": "C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\FtcRobotController\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sw720dp-land-v13\\values-sw720dp-land-v13.xml",
         "map": [
             {
                 "to": {
@@ -35,103 +59,7 @@
                     "endOffset": 109
                 },
                 "from": {
-                    "file": "/Users/sopa/Desktop/SnakeByte4546_2018/C:\\Users\\raymo\\Documents\\GitHub\\SnakeByte4546_2018\\FtcRobotController\\src\\main\\res\\values-sw720dp-land\\dimens.xml",
-                    "position": {
-                        "startLine": 39,
-                        "startColumn": 4,
-                        "startOffset": 1888,
-                        "endColumn": 58,
-                        "endOffset": 1942
-                    }
-                }
-            }
-        ]
-    },
-    {
-        "outputFile": "/Users/sopa/Desktop/SnakeByte4546_2018/C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\C:\\Users\\raymo\\Documents\\GitHub\\SnakeByte4546_2018\\FtcRobotController\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sw720dp-land-v13\\values-sw720dp-land-v13.xml",
-        "map": [
-            {
-                "to": {
-                    "startLine": 2,
-                    "startColumn": 4,
-                    "startOffset": 55,
-                    "endColumn": 58,
-                    "endOffset": 109
-                },
-                "from": {
-                    "file": "/Users/sopa/Desktop/SnakeByte4546_2018/C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\C:\\Users\\raymo\\Documents\\GitHub\\SnakeByte4546_2018\\FtcRobotController\\src\\main\\res\\values-sw720dp-land\\dimens.xml",
-                    "position": {
-                        "startLine": 39,
-                        "startColumn": 4,
-                        "startOffset": 1888,
-                        "endColumn": 58,
-                        "endOffset": 1942
-                    }
-                }
-            }
-        ]
-    },
-    {
-        "outputFile": "/Users/sopa/Desktop/SnakeByte4546_2018/C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\C:\\Users\\raymo\\Documents\\GitHub\\SnakeByte4546_2018\\FtcRobotController\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sw720dp-land-v13\\values-sw720dp-land-v13.xml",
-        "map": [
-            {
-                "to": {
-                    "startLine": 2,
-                    "startColumn": 4,
-                    "startOffset": 55,
-                    "endColumn": 58,
-                    "endOffset": 109
-                },
-                "from": {
-                    "file": "/Users/sopa/Desktop/SnakeByte4546_2018/C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\C:\\Users\\raymo\\Documents\\GitHub\\SnakeByte4546_2018\\FtcRobotController\\src\\main\\res\\values-sw720dp-land\\dimens.xml",
-                    "position": {
-                        "startLine": 39,
-                        "startColumn": 4,
-                        "startOffset": 1888,
-                        "endColumn": 58,
-                        "endOffset": 1942
-                    }
-                }
-            }
-        ]
-    },
-    {
-        "outputFile": "/Users/sopa/Desktop/SnakeByte4546_2018/C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\C:\\Users\\raymo\\Documents\\GitHub\\SnakeByte4546_2018\\FtcRobotController\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sw720dp-land-v13\\values-sw720dp-land-v13.xml",
-        "map": [
-            {
-                "to": {
-                    "startLine": 2,
-                    "startColumn": 4,
-                    "startOffset": 55,
-                    "endColumn": 58,
-                    "endOffset": 109
-                },
-                "from": {
-                    "file": "/Users/sopa/Desktop/SnakeByte4546_2018/C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\C:\\Users\\raymo\\Documents\\GitHub\\SnakeByte4546_2018\\FtcRobotController\\src\\main\\res\\values-sw720dp-land\\dimens.xml",
-                    "position": {
-                        "startLine": 39,
-                        "startColumn": 4,
-                        "startOffset": 1888,
-                        "endColumn": 58,
-                        "endOffset": 1942
-                    }
-                }
-            }
-        ]
-    },
-    {
-        "outputFile": "/Users/sopa/Desktop/SnakeByte4546_2018/C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\FtcRobotController\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sw720dp-land-v13\\values-sw720dp-land-v13.xml",
-        "map": [
-            {
-                "to": {
-                    "startLine": 2,
-                    "startColumn": 4,
-                    "startOffset": 55,
-                    "endColumn": 58,
-                    "endOffset": 109
-                },
-                "from": {
-                    "file": "/Users/sopa/Desktop/SnakeByte4546_2018/C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\FtcRobotController\\src\\main\\res\\values-sw720dp-land\\dimens.xml",
+                    "file": "C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\FtcRobotController\\src\\main\\res\\values-sw720dp-land\\dimens.xml",
                     "position": {
                         "startLine": 39,
                         "startColumn": 4,
@@ -144,7 +72,7 @@
         ]
     },
     {
-        "outputFile": "/Users/sopa/Desktop/SnakeByte4546_2018/C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\C:\\Users\\raymo\\Documents\\GitHub\\SnakeByte4546_2018\\FtcRobotController\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sw720dp-land-v13\\values-sw720dp-land-v13.xml",
+        "outputFile": "C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\FtcRobotController\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sw720dp-land-v13\\values-sw720dp-land-v13.xml",
         "map": [
             {
                 "to": {
@@ -155,7 +83,31 @@
                     "endOffset": 109
                 },
                 "from": {
-                    "file": "/Users/sopa/Desktop/SnakeByte4546_2018/C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\C:\\Users\\raymo\\Documents\\GitHub\\SnakeByte4546_2018\\FtcRobotController\\src\\main\\res\\values-sw720dp-land\\dimens.xml",
+                    "file": "C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\FtcRobotController\\src\\main\\res\\values-sw720dp-land\\dimens.xml",
+                    "position": {
+                        "startLine": 39,
+                        "startColumn": 4,
+                        "startOffset": 1849,
+                        "endColumn": 58,
+                        "endOffset": 1903
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "outputFile": "C:\\Users\\raymo\\Documents\\GitHub\\SnakeByte4546_2018\\FtcRobotController\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sw720dp-land-v13\\values-sw720dp-land-v13.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 58,
+                    "endOffset": 109
+                },
+                "from": {
+                    "file": "C:\\Users\\raymo\\Documents\\GitHub\\SnakeByte4546_2018\\FtcRobotController\\src\\main\\res\\values-sw720dp-land\\dimens.xml",
                     "position": {
                         "startLine": 39,
                         "startColumn": 4,
@@ -168,7 +120,7 @@
         ]
     },
     {
-        "outputFile": "/Users/sopa/Desktop/SnakeByte4546_2018/C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\FtcRobotController\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sw720dp-land-v13\\values-sw720dp-land-v13.xml",
+        "outputFile": "C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\C:\\Users\\raymo\\Documents\\GitHub\\SnakeByte4546_2018\\FtcRobotController\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sw720dp-land-v13\\values-sw720dp-land-v13.xml",
         "map": [
             {
                 "to": {
@@ -179,31 +131,7 @@
                     "endOffset": 109
                 },
                 "from": {
-                    "file": "/Users/sopa/Desktop/SnakeByte4546_2018/C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\FtcRobotController\\src\\main\\res\\values-sw720dp-land\\dimens.xml",
-                    "position": {
-                        "startLine": 39,
-                        "startColumn": 4,
-                        "startOffset": 1849,
-                        "endColumn": 58,
-                        "endOffset": 1903
-                    }
-                }
-            }
-        ]
-    },
-    {
-        "outputFile": "/Users/sopa/Desktop/SnakeByte4546_2018/C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\C:\\Users\\raymo\\Documents\\GitHub\\SnakeByte4546_2018\\FtcRobotController\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sw720dp-land-v13\\values-sw720dp-land-v13.xml",
-        "map": [
-            {
-                "to": {
-                    "startLine": 2,
-                    "startColumn": 4,
-                    "startOffset": 55,
-                    "endColumn": 58,
-                    "endOffset": 109
-                },
-                "from": {
-                    "file": "/Users/sopa/Desktop/SnakeByte4546_2018/C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\C:\\Users\\raymo\\Documents\\GitHub\\SnakeByte4546_2018\\FtcRobotController\\src\\main\\res\\values-sw720dp-land\\dimens.xml",
+                    "file": "C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\C:\\Users\\raymo\\Documents\\GitHub\\SnakeByte4546_2018\\FtcRobotController\\src\\main\\res\\values-sw720dp-land\\dimens.xml",
                     "position": {
                         "startLine": 39,
                         "startColumn": 4,
@@ -216,7 +144,7 @@
         ]
     },
     {
-        "outputFile": "/Users/sopa/Desktop/SnakeByte4546_2018/C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\FtcRobotController\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sw720dp-land-v13\\values-sw720dp-land-v13.xml",
+        "outputFile": "C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\C:\\Users\\raymo\\Documents\\GitHub\\SnakeByte4546_2018\\FtcRobotController\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sw720dp-land-v13\\values-sw720dp-land-v13.xml",
         "map": [
             {
                 "to": {
@@ -227,7 +155,79 @@
                     "endOffset": 109
                 },
                 "from": {
-                    "file": "/Users/sopa/Desktop/SnakeByte4546_2018/C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\FtcRobotController\\src\\main\\res\\values-sw720dp-land\\dimens.xml",
+                    "file": "C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\C:\\Users\\raymo\\Documents\\GitHub\\SnakeByte4546_2018\\FtcRobotController\\src\\main\\res\\values-sw720dp-land\\dimens.xml",
+                    "position": {
+                        "startLine": 39,
+                        "startColumn": 4,
+                        "startOffset": 1888,
+                        "endColumn": 58,
+                        "endOffset": 1942
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "outputFile": "C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\C:\\Users\\raymo\\Documents\\GitHub\\SnakeByte4546_2018\\FtcRobotController\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sw720dp-land-v13\\values-sw720dp-land-v13.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 58,
+                    "endOffset": 109
+                },
+                "from": {
+                    "file": "C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\C:\\Users\\raymo\\Documents\\GitHub\\SnakeByte4546_2018\\FtcRobotController\\src\\main\\res\\values-sw720dp-land\\dimens.xml",
+                    "position": {
+                        "startLine": 39,
+                        "startColumn": 4,
+                        "startOffset": 1888,
+                        "endColumn": 58,
+                        "endOffset": 1942
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "outputFile": "C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\C:\\Users\\raymo\\Documents\\GitHub\\SnakeByte4546_2018\\FtcRobotController\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sw720dp-land-v13\\values-sw720dp-land-v13.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 58,
+                    "endOffset": 109
+                },
+                "from": {
+                    "file": "C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\C:\\Users\\raymo\\Documents\\GitHub\\SnakeByte4546_2018\\FtcRobotController\\src\\main\\res\\values-sw720dp-land\\dimens.xml",
+                    "position": {
+                        "startLine": 39,
+                        "startColumn": 4,
+                        "startOffset": 1888,
+                        "endColumn": 58,
+                        "endOffset": 1942
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "outputFile": "C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\FtcRobotController\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sw720dp-land-v13\\values-sw720dp-land-v13.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 58,
+                    "endOffset": 109
+                },
+                "from": {
+                    "file": "C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\FtcRobotController\\src\\main\\res\\values-sw720dp-land\\dimens.xml",
                     "position": {
                         "startLine": 39,
                         "startColumn": 4,
@@ -240,7 +240,7 @@
         ]
     },
     {
-        "outputFile": "/Users/sopa/Desktop/SnakeByte4546_2018/C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\FtcRobotController\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sw720dp-land-v13\\values-sw720dp-land-v13.xml",
+        "outputFile": "C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\C:\\Users\\raymo\\Documents\\GitHub\\SnakeByte4546_2018\\FtcRobotController\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sw720dp-land-v13\\values-sw720dp-land-v13.xml",
         "map": [
             {
                 "to": {
@@ -251,7 +251,31 @@
                     "endOffset": 109
                 },
                 "from": {
-                    "file": "/Users/sopa/Desktop/SnakeByte4546_2018/C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\FtcRobotController\\src\\main\\res\\values-sw720dp-land\\dimens.xml",
+                    "file": "C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\C:\\Users\\raymo\\Documents\\GitHub\\SnakeByte4546_2018\\FtcRobotController\\src\\main\\res\\values-sw720dp-land\\dimens.xml",
+                    "position": {
+                        "startLine": 39,
+                        "startColumn": 4,
+                        "startOffset": 1888,
+                        "endColumn": 58,
+                        "endOffset": 1942
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "outputFile": "C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\FtcRobotController\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sw720dp-land-v13\\values-sw720dp-land-v13.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 58,
+                    "endOffset": 109
+                },
+                "from": {
+                    "file": "C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\FtcRobotController\\src\\main\\res\\values-sw720dp-land\\dimens.xml",
                     "position": {
                         "startLine": 39,
                         "startColumn": 4,
@@ -264,7 +288,7 @@
         ]
     },
     {
-        "outputFile": "/Users/sopa/Desktop/SnakeByte4546_2018/C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\FtcRobotController\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sw720dp-land-v13\\values-sw720dp-land-v13.xml",
+        "outputFile": "C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\FtcRobotController\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sw720dp-land-v13\\values-sw720dp-land-v13.xml",
         "map": [
             {
                 "to": {
@@ -275,7 +299,7 @@
                     "endOffset": 109
                 },
                 "from": {
-                    "file": "/Users/sopa/Desktop/SnakeByte4546_2018/C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\FtcRobotController\\src\\main\\res\\values-sw720dp-land\\dimens.xml",
+                    "file": "C:\\Users\\sopa\\Desktop\\SnakeByte4546_2018\\FtcRobotController\\src\\main\\res\\values-sw720dp-land\\dimens.xml",
                     "position": {
                         "startLine": 39,
                         "startColumn": 4,
