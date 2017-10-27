@@ -151,9 +151,10 @@ public abstract class AutoOpMode extends LinearOpMode {
         alliance = c;
     }
 
+    //if we're on the blue alliance we want to hit the red ball
     public String chooseColor(char c) {
         //hitting blue
-        if(c == 98) {
+        if(c == 114) {
             if(getBlue(colorFront) < getBlue(colorBack)) {
                 telemetry.addData("hit", "forwards");
                 telemetry.update();
@@ -176,7 +177,7 @@ public abstract class AutoOpMode extends LinearOpMode {
             }
         }
         //hitting red
-        if(c == 114) {
+        if(c == 98) {
             if(getRed(colorFront) < getRed(colorBack)) {
                 telemetry.addData("hit", "forwards");
                 telemetry.update();
