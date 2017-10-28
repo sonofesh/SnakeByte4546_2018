@@ -41,10 +41,13 @@ public class ShoulderControlsTeleOp extends OpMode {
 
     @Override
     public void init() {
-        //Expansion Hub 1: Motor 0 is BR, Motor 1 is FR, Motor 2 is BL, Motor 3 is FL
-        //Expansion Hub 1: Servo 0 is RRelicArm, Servo 1 is LRelioArm
-        //Expansion Hub 2:
-        //Expansion Hub 2: Servo 0 is JewelHitter
+        /*
+        Expansion Hub 1: Motor 0 is BR, Motor 1 is FR, Motor 2 is BL, Motor 3 is FL
+        Expansion Hub 1: Servo 0 is RRelicArm, Servo 1 is LRelioArm, Servo 2 is LRelio, Servo 3 is RRelic
+        Expansion Hub 1: Servo 4 is LMani, Servo 5 is RMani
+        Expansion Hub 2: Motor 0 is LSlide, Motor 1 is liftMani, Motor 2 is RSlide
+        Expansion Hub 2: Servo 0 is JewelHitter
+        */
         FL = hardwareMap.dcMotor.get("FL");
         FR = hardwareMap.dcMotor.get("FR");
         BR = hardwareMap.dcMotor.get("BR");
@@ -131,16 +134,16 @@ public class ShoulderControlsTeleOp extends OpMode {
         if (halfSpeed)
             return 0.5;
         return 1;
-        
+
     }
 
     //Relic
     public void setArmPower() {
-        if (gamepad2.right_stick_y > 0.1) {
-            leftArm.setPosition(1);
+        if (gamepad2.right_stick_y > 0.2) {
+            leftArm.setPosition(1 );
             rightArm.setPosition(0);
         }
-        else if (gamepad2.right_stick_y < -0.1){
+        else if (gamepad2.right_stick_y < -0.2){
             leftArm.setPosition(0);
             rightArm.setPosition(1);
         }
@@ -149,6 +152,7 @@ public class ShoulderControlsTeleOp extends OpMode {
             rightArm.setPosition(0.5);
         }
     }
+
 
     //Jewel Hitter (have not tested positions)
     public void setJewelHitter(){
@@ -227,6 +231,7 @@ public class ShoulderControlsTeleOp extends OpMode {
             rightRelic.setPosition(rightRelicPosition);
         }
     }
+
     public void pickRelic(){
         if(gamepad2.x) {
             leftRelic.setPosition(1);
@@ -237,6 +242,7 @@ public class ShoulderControlsTeleOp extends OpMode {
             rightRelic.setPosition(1);
         }
     }
+
     public void raiseMani() {
         if (gamepad2.dpad_down){
             liftMani.setPower(1);

@@ -58,10 +58,10 @@ public abstract class AutoOpMode extends LinearOpMode {
         BL = hardwareMap.dcMotor.get("BL");
         BR = hardwareMap.dcMotor.get("BR");
         Jewel = hardwareMap.servo.get("Jewel");
-        FL.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODERS);
-        FR.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODERS);
-        BL.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODERS);
-        BR.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODERS);
+        FL.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
+        FR.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
+        BL.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
+        BR.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
         //gyro init
         BNO055IMU.Parameters parameters = new BNO055IMU.Parameters();
         parameters.angleUnit = BNO055IMU.AngleUnit.DEGREES;
