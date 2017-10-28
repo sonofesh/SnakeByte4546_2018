@@ -188,11 +188,13 @@ public class ShoulderControlsTeleOp extends OpMode {
 
     //relic lift
     public void setLiftSlide(){
-        if (gamepad2.left_stick_y > 0.1){
+        if (gamepad2.left_stick_y < -0.1){
             leftLiftSlide.setPower(-1);
-        }
-        else if (gamepad2.left_stick_y < -0.1){
             rightLiftSlide.setPower(1);
+        }
+        else if (gamepad2.left_stick_y > 0.1){
+            rightLiftSlide.setPower(-1);
+            leftLiftSlide.setPower(1);
         }
         else{
             rightLiftSlide.setPower(0);
