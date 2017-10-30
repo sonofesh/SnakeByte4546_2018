@@ -67,6 +67,12 @@ public abstract class AutoOpMode extends LinearOpMode {
         FR = hardwareMap.dcMotor.get("FR");
         BR = hardwareMap.dcMotor.get("BR");
         BL = hardwareMap.dcMotor.get("BL");
+        FL.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
+        FR.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
+        FL.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
+        BL.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
+        BR.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
+        FR.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
         leftArm = hardwareMap.servo.get("LRelicArm");
         rightArm = hardwareMap.servo.get("RRelicArm");
         leftRelic = hardwareMap.servo.get("LRelic");
@@ -157,10 +163,10 @@ public abstract class AutoOpMode extends LinearOpMode {
     }
 
     public void lowerJewel() {
-        jewelHitter.setPosition(1);
+        jewelHitter.setPosition(0);
     }
 
-    public void raiseJewel() {jewelHitter.setPosition(0);
+    public void raiseJewel() {jewelHitter.setPosition(0.57);
     }
 
     public void setAlliance(char c) {
@@ -171,12 +177,12 @@ public abstract class AutoOpMode extends LinearOpMode {
     public String chooseColor(char c) {
         //hitting blue
         if(c == 114) {
-            if(getBlue(colorFront) < getBlue(colorBack)) {
+            if(getBlue(colorFront) < getBlue(colorBack) - 8) {
                 telemetry.addData("hit", "forwards");
                 telemetry.update();
                 return "forwards";
             }
-            else if(getBlue(colorFront) > getBlue(colorBack)) {
+            else if(getBlue(colorFront) - 8 > getBlue(colorBack)) {
                 telemetry.addData("hit", "backwards");
                 telemetry.update();
                 return "backwards";
@@ -194,12 +200,12 @@ public abstract class AutoOpMode extends LinearOpMode {
         }
         //hitting red
         if(c == 98) {
-            if(getRed(colorFront) < getRed(colorBack)) {
+            if(getRed(colorFront) < getRed(colorBack) - 8) {
                 telemetry.addData("hit", "forwards");
                 telemetry.update();
                 return "forwards";
             }
-            else if(getRed(colorFront) > getRed(colorBack)) {
+            else if(getRed(colorFront) > getRed(colorBack) - 8) {
                 telemetry.addData("hit", "backwards");
                 telemetry.update();
                 return "backwards";
@@ -326,7 +332,7 @@ public abstract class AutoOpMode extends LinearOpMode {
 
     public void grabGlyph(){
         closeTime = System.currentTimeMillis();
-        while(System.currentTimeMillis() - closeTime < 1000) {
+        while(System.currentTimeMillis() - closeTime < 2000) {
             leftMani.setPosition(1);
             rightMani.setPosition(1);
         }
@@ -336,7 +342,7 @@ public abstract class AutoOpMode extends LinearOpMode {
 
     public void releaseGlyph() {
         closeTime = System.currentTimeMillis();
-        while (System.currentTimeMillis() - closeTime < 1000) {
+        while (System.currentTimeMillis() - closeTime < 2000) {
             leftMani.setPosition(0.3);
             rightMani.setPosition(0.3);
         }

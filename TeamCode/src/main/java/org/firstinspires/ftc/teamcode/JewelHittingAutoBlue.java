@@ -12,5 +12,6 @@ public class JewelHittingAutoBlue extends AutoOpMode {
         setAlliance('b');
         lowerJewel();
         hitJewel();
+        moveForward(0.5,2000);
     }
 }

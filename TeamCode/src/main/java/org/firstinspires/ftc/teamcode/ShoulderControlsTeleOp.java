@@ -37,7 +37,7 @@ public class ShoulderControlsTeleOp extends OpMode {
     long lastTime;
     long closeTime;
     //jewelstate 0 is upright, 1 is near upright, 2 is position to hit jewel
-    int jewelState = 0;
+    String jewelState = "down";
 
     @Override
     public void init() {
@@ -79,7 +79,7 @@ public class ShoulderControlsTeleOp extends OpMode {
         raiseMani();
         //grapRelic();
         pickRelic();
-        setJewelHitter();
+        useJewel();
         //telemetry.addData("JewelHitter", jewelHitter.getPosition());
     }
 
@@ -103,6 +103,15 @@ public class ShoulderControlsTeleOp extends OpMode {
         if (gamepad1.left_bumper)
             return 1.0;
         return 0;
+    }
+
+    public void useJewel(){
+        if (gamepad1.x){
+            jewelHitter.setPosition(0);
+        }
+        if (gamepad1.y){
+            jewelHitter.setPosition(0.57);
+        }
     }
 
 
@@ -139,11 +148,11 @@ public class ShoulderControlsTeleOp extends OpMode {
 
     //Relic
     public void setArmPower() {
-        if (gamepad2.right_stick_y > 0.2) {
-            leftArm.setPosition(1 );
+        if (gamepad2.right_stick_y < -0.2) {
+            leftArm.setPosition(1);
             rightArm.setPosition(0);
         }
-        else if (gamepad2.right_stick_y < -0.2){
+        else if (gamepad2.right_stick_y > 0.2){
             leftArm.setPosition(0);
             rightArm.setPosition(1);
         }
@@ -155,28 +164,7 @@ public class ShoulderControlsTeleOp extends OpMode {
 
 
     //Jewel Hitter (have not tested positions)
-    public void setJewelHitter(){
-        if (gamepad2.right_bumper){
-            if (jewelState == 0){
-                jewelHitter.setPosition(0.2);
-                jewelState = 1;
-                telemetry.addData("Position", jewelHitter);
-                telemetry.update();
-            }
-            else if (jewelState == 1){
-                jewelHitter.setPosition(1);
-                jewelState = 2;
-                telemetry.addData("Position", jewelHitter);
-                telemetry.update();
-            }
-            else if (jewelState == 2){
-                jewelHitter.setPosition(0);
-                jewelState = 0;
-                telemetry.addData("Position", jewelHitter);
-                telemetry.update();
-            }
-        }
-    }
+
 
 
     public void setPower() {
