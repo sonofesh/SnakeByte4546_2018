@@ -339,9 +339,9 @@ public abstract class AutoOpMode extends LinearOpMode {
         while (System.currentTimeMillis() - closeTime < 1000) {
             leftMani.setPosition(0.3);
             rightMani.setPosition(0.3);
-            leftMani.setPosition(0.5);
-            rightMani.setPosition(0.5);
         }
+        leftMani.setPosition(0.5);
+        rightMani.setPosition(0.5);
     }
 
 }
