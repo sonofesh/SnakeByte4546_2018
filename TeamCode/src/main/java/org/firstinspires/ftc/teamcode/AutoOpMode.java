@@ -37,7 +37,16 @@ public abstract class AutoOpMode extends LinearOpMode {
     DcMotor FR;
     DcMotor BL;
     DcMotor BR;
-    Servo Jewel;
+    DcMotor leftLiftSlide;
+    DcMotor rightLiftSlide;
+    DcMotor liftMani;
+    Servo leftMani;
+    Servo rightMani;
+    Servo jewelHitter;
+    Servo leftArm;
+    Servo rightArm;
+    Servo leftRelic;
+    Servo rightRelic;
     BNO055IMU imu;
     ColorSensor colorFront;
     ColorSensor colorBack;
@@ -48,6 +57,7 @@ public abstract class AutoOpMode extends LinearOpMode {
     String cryptoboxKey;
     VuforiaLocalizer.Parameters parameters;
     char alliance;
+    long closeTime;
 
 
     public void initialize() {
@@ -55,13 +65,20 @@ public abstract class AutoOpMode extends LinearOpMode {
         //Jewel is 0
         FL = hardwareMap.dcMotor.get("FL");
         FR = hardwareMap.dcMotor.get("FR");
-        BL = hardwareMap.dcMotor.get("BL");
         BR = hardwareMap.dcMotor.get("BR");
-        Jewel = hardwareMap.servo.get("Jewel");
-        FL.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
-        FR.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
-        BL.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
-        BR.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
+        BL = hardwareMap.dcMotor.get("BL");
+        leftArm = hardwareMap.servo.get("LRelicArm");
+        rightArm = hardwareMap.servo.get("RRelicArm");
+        leftRelic = hardwareMap.servo.get("LRelic");
+        rightRelic = hardwareMap.servo.get("RRelic");
+        leftMani = hardwareMap.servo.get("LMani");
+        rightMani = hardwareMap.servo.get("RMani");
+        rightMani.setDirection(Servo.Direction.FORWARD);
+        leftMani.setDirection(Servo.Direction.REVERSE);
+        leftLiftSlide = hardwareMap.dcMotor.get("LSlide");
+        rightLiftSlide = hardwareMap.dcMotor.get("RSlide");
+        liftMani = hardwareMap.dcMotor.get("liftMani");
+        jewelHitter = hardwareMap.servo.get("jewelhitter");
         //gyro init
         BNO055IMU.Parameters parameters = new BNO055IMU.Parameters();
         parameters.angleUnit = BNO055IMU.AngleUnit.DEGREES;
@@ -140,11 +157,10 @@ public abstract class AutoOpMode extends LinearOpMode {
     }
 
     public void lowerJewel() {
-        Jewel.setPosition(1);
+        jewelHitter.setPosition(1);
     }
 
-    public void raiseJewel() {
-        Jewel.setPosition(0);
+    public void raiseJewel() {jewelHitter.setPosition(0);
     }
 
     public void setAlliance(char c) {
@@ -308,9 +324,25 @@ public abstract class AutoOpMode extends LinearOpMode {
             moveForward(.2,2000);
     }
 
+    public void grabGlyph(){
+        closeTime = System.currentTimeMillis();
+        while(System.currentTimeMillis() - closeTime < 1000) {
+            leftMani.setPosition(1);
+            rightMani.setPosition(1);
+        }
+        leftMani.setPosition(0.5);
+        rightMani.setPosition(0.5);
+    }
 
-
-
+    public void releaseGlyph() {
+        closeTime = System.currentTimeMillis();
+        while (System.currentTimeMillis() - closeTime < 1000) {
+            leftMani.setPosition(0.3);
+            rightMani.setPosition(0.3);
+            leftMani.setPosition(0.5);
+            rightMani.setPosition(0.5);
+        }
+    }
 
 }
 
