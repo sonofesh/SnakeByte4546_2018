@@ -85,6 +85,7 @@ public abstract class AutoOpMode extends LinearOpMode {
         rightLiftSlide = hardwareMap.dcMotor.get("RSlide");
         liftMani = hardwareMap.dcMotor.get("liftMani");
         jewelHitter = hardwareMap.servo.get("jewelhitter");
+        jewelHitter.setDirection(Servo.Direction.REVERSE);
         //gyro init
         BNO055IMU.Parameters parameters = new BNO055IMU.Parameters();
         parameters.angleUnit = BNO055IMU.AngleUnit.DEGREES;
@@ -97,7 +98,8 @@ public abstract class AutoOpMode extends LinearOpMode {
         imu.initialize(parameters);
         //color sensor init
         colorFront = hardwareMap.colorSensor.get("color");
-        colorBack = hardwareMap.colorSensor.get("color2");
+        //colorBack = hardwareMap.colorSensor.get("color2");
+        telemetry.addData("BloodDiamonds", "Ready");
     }
 
     public void prepareVuforia(){
@@ -223,13 +225,26 @@ public abstract class AutoOpMode extends LinearOpMode {
         return "broken";
     }
 
-    public void hitJewel() throws InterruptedException {
-        if (chooseColor(alliance).equals("forwards")) {
-            //park in safe zone
-            moveForward(0.25, 3000);
+    public String useOneColor(char c){
+        if (colorFront.red() > colorFront.blue()){
+            return "backwards";
         }
-        else if (chooseColor(alliance).equals("backwards")) {
+        else if (colorFront.blue() > colorFront.red()) {
+            return "forwards";
+        }
+        return "";
+    }
+
+    public void hitJewel() throws InterruptedException {
+        if (useOneColor(alliance).equals("forwards")) {
+            //park in safe zone
+            moveForward(0.25, 500);
+            raiseJewel();
+            moveForward(0.25,2700);
+        }
+        else if (useOneColor(alliance).equals("backwards")) {
             moveForward(-0.25, 500);
+            raiseJewel();
             moveForward(.25, 4000);
         }
 
