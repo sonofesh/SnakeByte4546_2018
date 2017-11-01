@@ -80,6 +80,7 @@ public class ShoulderControlsTeleOp extends OpMode {
         //grapRelic();
         pickRelic();
         useJewel();
+        //jewelHitter.setPosition(0.54);
         //telemetry.addData("JewelHitter", jewelHitter.getPosition());
     }
 
@@ -106,10 +107,11 @@ public class ShoulderControlsTeleOp extends OpMode {
     }
 
     public void useJewel(){
-        if (gamepad1.x){
+        if (gamepad1.dpad_left){
             jewelHitter.setPosition(0);
         }
-        if (gamepad1.y){
+        if (gamepad1.dpad_right
+                ){
             jewelHitter.setPosition(0.57);
         }
     }

@@ -60,7 +60,7 @@ public abstract class AutoOpMode extends LinearOpMode {
     long closeTime;
 
 
-    public void initialize() {
+    public void initialize() throws InterruptedException {
         //FL is 0, BL is 1, FR is 2, BR is 3
         //Jewel is 0
         FL = hardwareMap.dcMotor.get("FL");
@@ -97,12 +97,13 @@ public abstract class AutoOpMode extends LinearOpMode {
         imu = hardwareMap.get(BNO055IMU.class, "imu");
         imu.initialize(parameters);
         //color sensor init
-        colorFront = hardwareMap.colorSensor.get("color");
-        //colorBack = hardwareMap.colorSensor.get("color2");
-        telemetry.addData("BloodDiamonds", "Ready");
+        //colorFront = hardwareMap.colorSensor.get("color");
+        colorBack = hardwareMap.colorSensor.get("color2");
+        //colorFront.enableLed(true);
+        colorBack.enableLed(true);
     }
 
-    public void prepareVuforia(){
+    public void prepareVuforia() throws InterruptedException{
         int cameraMonitorViewId = hardwareMap.appContext.getResources().getIdentifier("cameraMonitorViewId", "id", hardwareMap.appContext.getPackageName());
         VuforiaLocalizer.Parameters parameters = new VuforiaLocalizer.Parameters(cameraMonitorViewId);
         //key
@@ -117,7 +118,7 @@ public abstract class AutoOpMode extends LinearOpMode {
         relicTrackables.activate();
     }
 
-    public void setPower(double velocity, double rotation, double strafe){
+    public void setPower(double velocity, double rotation, double strafe) throws InterruptedException {
         FL.setPower(velocity - rotation + strafe);
         FR.setPower(-velocity - rotation + strafe);
         BL.setPower(velocity - rotation - strafe);
@@ -131,7 +132,7 @@ public abstract class AutoOpMode extends LinearOpMode {
         BR.setPower(0);
     }
 
-    public double calculateStrafe (double velocity, double angle) {
+    public double calculateStrafe (double velocity, double angle) throws InterruptedException {
         return Math.tan(angle)/velocity;
     }
 
@@ -156,35 +157,54 @@ public abstract class AutoOpMode extends LinearOpMode {
 //        return (Math.abs(angles.firstAngle) - turnAbs);
     }
 
-    public int getRed(ColorSensor color) {
+    public int getRed(ColorSensor color) throws InterruptedException {
         return color.red();
     }
 
-    public int getBlue(ColorSensor color) {
+    public int getBlue(ColorSensor color) throws InterruptedException {
         return color.blue();
     }
 
-    public void lowerJewel() {
+    public void lowerJewel() throws InterruptedException {
         jewelHitter.setPosition(0);
     }
 
-    public void raiseJewel() {jewelHitter.setPosition(0.57);
+    public void raiseJewel() throws InterruptedException
+    {jewelHitter.setPosition(0.57);
     }
 
-    public void setAlliance(char c) {
+    public void setAlliance(char c) throws InterruptedException {
         alliance = c;
     }
 
-    //if we're on the blue alliance we want to hit the red ball
-    public String chooseColor(char c) {
+    public String choseOneColor(char c) throws InterruptedException {
         //hitting blue
         if(c == 114) {
-            if(getBlue(colorFront) < getBlue(colorBack) - 8) {
+            if(getRed(colorBack) < getBlue(colorBack)) {
+                telemetry.addData("hit", "backwards");
+                telemetry.update();
+                return "forwards";
+            }
+            else if(getRed(colorBack) > getBlue(colorBack)) {
+                telemetry.addData("hit", "forwards");
+                telemetry.update();
+                return "backwards";
+            }
+            else {
+                sleep(1000);
+                if (recCount < 2)
+                    recCount++;
+                chooseColor(c);
+            }
+        }
+        //hitting red
+        if(c == 98) {
+            if(getRed(colorBack) < getBlue(colorBack)) {
                 telemetry.addData("hit", "forwards");
                 telemetry.update();
                 return "forwards";
             }
-            else if(getBlue(colorFront) - 8 > getBlue(colorBack)) {
+            else if(getRed(colorBack) > getBlue(colorBack)) {
                 telemetry.addData("hit", "backwards");
                 telemetry.update();
                 return "backwards";
@@ -193,7 +213,30 @@ public abstract class AutoOpMode extends LinearOpMode {
                 sleep(1000);
                 if (recCount < 2)
                     recCount++;
-                    chooseColor(c);
+                chooseColor(c);
+            }
+        }
+        return "broken";
+    }
+
+    public String chooseColor(char c) throws InterruptedException {
+        //hitting blue
+        if(c == 114) {
+            if(getBlue(colorFront) < getBlue(colorBack)) {
+                telemetry.addData("hit", "forwards");
+                telemetry.update();
+                return "forwards";
+            }
+            else if(getBlue(colorFront) > getBlue(colorBack)) {
+                telemetry.addData("hit", "backwards");
+                telemetry.update();
+                return "backwards";
+            }
+            else {
+                sleep(1000);
+                if (recCount < 2)
+                    recCount++;
+                chooseColor(c);
                 telemetry.addData("ColorSensors", "broken");
                 telemetry.update();
                 return "broken";
@@ -202,12 +245,12 @@ public abstract class AutoOpMode extends LinearOpMode {
         }
         //hitting red
         if(c == 98) {
-            if(getRed(colorFront) < getRed(colorBack) - 8) {
+            if(getRed(colorFront) < getRed(colorBack)) {
                 telemetry.addData("hit", "forwards");
                 telemetry.update();
                 return "forwards";
             }
-            else if(getRed(colorFront) > getRed(colorBack) - 8) {
+            else if(getRed(colorFront) > getRed(colorBack)) {
                 telemetry.addData("hit", "backwards");
                 telemetry.update();
                 return "backwards";
@@ -216,7 +259,7 @@ public abstract class AutoOpMode extends LinearOpMode {
                 sleep(1000);
                 if (recCount < 2)
                     recCount++;
-                    chooseColor(c);
+                chooseColor(c);
                 telemetry.addData("ColorSensors", "broken");
                 telemetry.update();
                 return "broken";
@@ -225,43 +268,31 @@ public abstract class AutoOpMode extends LinearOpMode {
         return "broken";
     }
 
-    public String useOneColor(char c){
-        if (colorFront.red() > colorFront.blue()){
-            return "backwards";
-        }
-        else if (colorFront.blue() > colorFront.red()) {
-            return "forwards";
-        }
-        return "";
-    }
+
 
     public void hitJewel() throws InterruptedException {
-        if (useOneColor(alliance).equals("forwards")) {
+        if (choseOneColor(alliance).equals("forwards")) {
             //park in safe zone
-            moveForward(0.25, 500);
-            raiseJewel();
-            moveForward(0.25,2700);
+            moveForward(0.25, 200);
         }
-        else if (useOneColor(alliance).equals("backwards")) {
-            moveForward(-0.25, 500);
-            raiseJewel();
-            moveForward(.25, 4000);
+        else if (choseOneColor(alliance).equals("backwards")) {
+            moveForward(-0.25, 200);
         }
-
+        raiseJewel();
     }
 
-    public int getAvgEncoder(){
+    public int getAvgEncoder() throws InterruptedException{
         return (Math.abs(FL.getCurrentPosition()) + Math.abs(FR.getCurrentPosition()))/2;
     }
-    public void moveForward(double velocity) {
+    public void moveForward(double velocity) throws InterruptedException {
         setPower(velocity, 0, 0);
     }
 
-    public void moveAtAngle(double velocity, double angle){
+    public void moveAtAngle(double velocity, double angle) throws InterruptedException{
         setPower(velocity, 0, calculateStrafe(velocity, angle));
     }
 
-    public void turn(double rotation){
+    public void turn(double rotation) throws InterruptedException{
         setPower(0,rotation,0);
     }
 
@@ -306,7 +337,7 @@ public abstract class AutoOpMode extends LinearOpMode {
         setZero();
     }
 
-    public void scanImage()
+    public void scanImage() throws InterruptedException
     {
         RelicRecoveryVuMark vuMark = RelicRecoveryVuMark.from(relicTemplate);
         if (vuMark != RelicRecoveryVuMark.UNKNOWN) {
@@ -345,7 +376,7 @@ public abstract class AutoOpMode extends LinearOpMode {
             moveForward(.2,2000);
     }
 
-    public void grabGlyph(){
+    public void grabGlyph() throws InterruptedException{
         closeTime = System.currentTimeMillis();
         while(System.currentTimeMillis() - closeTime < 2000) {
             leftMani.setPosition(1);
@@ -355,7 +386,7 @@ public abstract class AutoOpMode extends LinearOpMode {
         rightMani.setPosition(0.5);
     }
 
-    public void releaseGlyph() {
+    public void releaseGlyph() throws InterruptedException  {
         closeTime = System.currentTimeMillis();
         while (System.currentTimeMillis() - closeTime < 2000) {
             leftMani.setPosition(0.3);

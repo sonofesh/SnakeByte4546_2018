@@ -10,9 +10,14 @@ public class JewelHittingAutoRed extends AutoOpMode {
     @Override
     public void runOpMode() throws InterruptedException {
         initialize();
+        telemetry.addData("Red", "Ready");
         waitForStart();
         setAlliance('r');
         lowerJewel();
+        sleep(2500);
         hitJewel();
+        sleep(1000);
+        moveForward(-0.2, 2000);
+        sleep(2000);
     }
 }
